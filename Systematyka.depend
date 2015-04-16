@@ -66,3 +66,85 @@
 1429100867 c:\users\zuza\desktop\projekty programów\systematyka\mchy.hpp
 	"Mszaki.hpp"
 
+1429097260 source:c:\users\zuza\gitrepos\systematyka\drapiezniki.cpp
+	"Drapiezniki.hpp"
+
+1429097271 c:\users\zuza\gitrepos\systematyka\drapiezniki.hpp
+	"OrganizmyZywe.hpp"
+	"Zwierzeta.hpp"
+
+1429097527 c:\users\zuza\gitrepos\systematyka\organizmyzywe.hpp
+
+1429097260 c:\users\zuza\gitrepos\systematyka\zwierzeta.hpp
+	"OrganizmyZywe.hpp"
+
+1429221154 source:c:\users\zuza\gitrepos\systematyka\main.cpp
+	<iostream>
+	"LiniaPolecen.hpp"
+
+1429100853 source:c:\users\zuza\gitrepos\systematyka\mchy.cpp
+	"Mchy.hpp"
+
+1429100867 c:\users\zuza\gitrepos\systematyka\mchy.hpp
+	"Mszaki.hpp"
+
+1429100680 c:\users\zuza\gitrepos\systematyka\mszaki.hpp
+	"Zarodnikowe.hpp"
+
+1429098048 c:\users\zuza\gitrepos\systematyka\zarodnikowe.hpp
+	"Rosliny.hpp"
+
+1429097723 c:\users\zuza\gitrepos\systematyka\rosliny.hpp
+	"OrganizmyZywe.hpp"
+
+1429100680 source:c:\users\zuza\gitrepos\systematyka\mszaki.cpp
+	"Mszaki.hpp"
+
+1429097919 source:c:\users\zuza\gitrepos\systematyka\nasienne.cpp
+	"Nasienne.hpp"
+
+1429097889 c:\users\zuza\gitrepos\systematyka\nasienne.hpp
+	"Rosliny.hpp"
+
+1429097260 source:c:\users\zuza\gitrepos\systematyka\organizmyzywe.cpp
+	<string>
+	<iostream>
+	"OrganizmyZywe.hpp"
+
+1429098276 source:c:\users\zuza\gitrepos\systematyka\paprotniki.cpp
+	"Paprotniki.hpp"
+
+1429098237 c:\users\zuza\gitrepos\systematyka\paprotniki.hpp
+	"Zarodnikowe.hpp"
+
+1429097445 source:c:\users\zuza\gitrepos\systematyka\roslinozercy.cpp
+	"Roslinozercy.hpp"
+
+1429097527 c:\users\zuza\gitrepos\systematyka\roslinozercy.hpp
+	"Zwierzeta.hpp"
+
+1429097724 source:c:\users\zuza\gitrepos\systematyka\rosliny.cpp
+	"Rosliny.hpp"
+
+1429101054 source:c:\users\zuza\gitrepos\systematyka\torfowce.cpp
+	"Torfowce.hpp"
+
+1429101054 c:\users\zuza\gitrepos\systematyka\torfowce.hpp
+	"Mszaki.hpp"
+
+1429098080 source:c:\users\zuza\gitrepos\systematyka\zarodnikowe.cpp
+	"Zarodnikowe.hpp"
+
+1429097260 source:c:\users\zuza\gitrepos\systematyka\zwierzeta.cpp
+	<iostream>
+	<string>
+	"Zwierzeta.hpp"
+
+1429228166 source:c:\users\zuza\gitrepos\systematyka\liniapolecen.cpp
+	<iostream>
+	<stdio.h>
+	<string.h>
+	"LiniaPolecen.hpp"
+
+1429227815 c:\users\zuza\gitrepos\systematyka\liniapolecen.hpp
+

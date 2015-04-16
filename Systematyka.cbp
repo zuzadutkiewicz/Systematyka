@@ -34,6 +34,8 @@
 		</Compiler>
 		<Unit filename="Drapiezniki.cpp" />
 		<Unit filename="Drapiezniki.hpp" />
+		<Unit filename="LiniaPolecen.cpp" />
+		<Unit filename="LiniaPolecen.hpp" />
 		<Unit filename="Mchy.cpp" />
 		<Unit filename="Mchy.hpp" />
 		<Unit filename="Mszaki.cpp" />

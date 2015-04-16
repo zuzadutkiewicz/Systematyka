@@ -1,9 +1,11 @@
 #include <iostream>
 
+#include "LiniaPolecen.hpp"
+
 using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
-    return 0;
+    LiniaPolecen liniaPolecen = LiniaPolecen();
+    liniaPolecen.liniaPolecen();
 }
