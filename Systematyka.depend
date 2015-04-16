@@ -1,0 +1,68 @@
+# depslib dependency file v1.0
+1385320478 source:c:\users\zuza\desktop\projekty programów\systematyka\main.cpp
+	<iostream>
+
+1429097260 source:c:\users\zuza\desktop\projekty programów\systematyka\organizmyzywe.cpp
+	<string>
+	<iostream>
+	"OrganizmyZywe.hpp"
+
+1429097527 c:\users\zuza\desktop\projekty programów\systematyka\organizmyzywe.hpp
+
+1429097260 source:c:\users\zuza\desktop\projekty programów\systematyka\zwierzeta.cpp
+	<iostream>
+	<string>
+	"Zwierzeta.hpp"
+
+1429097260 c:\users\zuza\desktop\projekty programów\systematyka\zwierzeta.hpp
+	"OrganizmyZywe.hpp"
+
+1429097260 source:c:\users\zuza\desktop\projekty programów\systematyka\drapiezniki.cpp
+	"Drapiezniki.hpp"
+
+1429097271 c:\users\zuza\desktop\projekty programów\systematyka\drapiezniki.hpp
+	"OrganizmyZywe.hpp"
+	"Zwierzeta.hpp"
+
+1429097445 source:c:\users\zuza\desktop\projekty programów\systematyka\roslinozercy.cpp
+	"Roslinozercy.hpp"
+
+1429097527 c:\users\zuza\desktop\projekty programów\systematyka\roslinozercy.hpp
+	"Zwierzeta.hpp"
+
+1429097724 source:c:\users\zuza\desktop\projekty programów\systematyka\rosliny.cpp
+	"Rosliny.hpp"
+
+1429097723 c:\users\zuza\desktop\projekty programów\systematyka\rosliny.hpp
+	"OrganizmyZywe.hpp"
+
+1429097919 source:c:\users\zuza\desktop\projekty programów\systematyka\nasienne.cpp
+	"Nasienne.hpp"
+
+1429097889 c:\users\zuza\desktop\projekty programów\systematyka\nasienne.hpp
+	"Rosliny.hpp"
+
+1429098080 source:c:\users\zuza\desktop\projekty programów\systematyka\zarodnikowe.cpp
+	"Zarodnikowe.hpp"
+
+1429098048 c:\users\zuza\desktop\projekty programów\systematyka\zarodnikowe.hpp
+	"Rosliny.hpp"
+
+1429098276 source:c:\users\zuza\desktop\projekty programów\systematyka\paprotniki.cpp
+	"Paprotniki.hpp"
+
+1429098237 c:\users\zuza\desktop\projekty programów\systematyka\paprotniki.hpp
+	"Zarodnikowe.hpp"
+
+1429100680 source:c:\users\zuza\desktop\projekty programów\systematyka\mszaki.cpp
+	"Mszaki.hpp"
+
+1429100680 c:\users\zuza\desktop\projekty programów\systematyka\mszaki.hpp
+	"Zarodnikowe.hpp"
+
+1429100853 source:c:\users\zuza\desktop\projekty programów\systematyka\mchy.cpp
+	"Mchy.hpp"
+
+1429100867 c:\users\zuza\desktop\projekty programów\systematyka\mchy.hpp
+	"Mszaki.hpp"
+
