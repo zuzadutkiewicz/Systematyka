@@ -15,7 +15,7 @@ void LiniaPolecen::liniaPolecen()
     uzupelnijNazwy(nazwy);
     while (true)
     {
-        printf("$ ");
+        printf("%s $ ", current);
         scanf("%[^\n]*", opcja);
         getchar();
         root = dajTokeny(opcja, root);
@@ -154,7 +154,7 @@ void LiniaPolecen::uzupelnijNazwy(char nazwy[6][20])
     strcpy(nazwy[1], "roslinozercy");
     strcpy(nazwy[2], "paprotniki");
     strcpy(nazwy[3], "mchy");
-    strcpy(nazwy[4], "torfofce");
+    strcpy(nazwy[4], "torfowce");
     strcpy(nazwy[5], "nasienne");
 
 
