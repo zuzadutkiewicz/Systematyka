@@ -62,6 +62,63 @@ void LiniaPolecen::liniaPolecen()
             else
                 drzewo.wyswietlDrzewo();
         }
+        else if(root != NULL && strcmp(root->opcja, "dir") == 0 )
+        {
+            if(root->nastepny != NULL)
+                printf("Blad: za duzo parametrow\n");
+            else
+                cout << "Opcja niedostepna" << endl;
+        }
+        else if(root != NULL && strcmp(root->opcja, "read") == 0 )
+        {
+            if(root->nastepny != NULL)
+                printf("Blad: za duzo parametrow\n");
+            else
+                cout << "Opcja niedostepna" << endl;
+        }
+        else if(root != NULL && strcmp(root->opcja, "save") == 0 )
+        {
+            if(root->nastepny != NULL)
+                printf("Blad: za duzo parametrow\n");
+            else
+                cout << "Opcja niedostepna" << endl;
+        }
+        else if(root != NULL && strcmp(root->opcja, "mo") == 0 )
+        {
+            if(root->nastepny == NULL)
+                printf("Blad: brak parametru\n");
+            else if(root->nastepny->nastepny != NULL)
+                printf("Blad: za duzo parametrow\n");
+            else
+                cout << "Opcja niedostepna" << endl;
+        }
+        else if(root != NULL && strcmp(root->opcja, "do") == 0 )
+        {
+            if(root->nastepny == NULL)
+                printf("Blad: brak parametru\n");
+            else if(root->nastepny->nastepny != NULL)
+                printf("Blad: za duzo parametrow\n");
+            else
+                cout << "Opcja niedostepna" << endl;
+        }
+        else if(root != NULL && strcmp(root->opcja, "mdo") == 0 )
+        {
+            if(root->nastepny == NULL)
+                printf("Blad: brak parametru\n");
+            else if(root->nastepny->nastepny != NULL)
+                printf("Blad: za duzo parametrow\n");
+            else
+                cout << "Opcja niedostepna" << endl;
+        }
+        else if(root != NULL && strcmp(root->opcja, "show") == 0 )
+        {
+            if(root->nastepny == NULL)
+                printf("Blad: brak parametru\n");
+            else if(root->nastepny->nastepny != NULL)
+                printf("Blad: za duzo parametrow\n");
+            else
+                cout << "Opcja niedostepna" << endl;
+        }
         else
         {
             if(root != NULL )
