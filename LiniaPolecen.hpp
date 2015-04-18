@@ -1,6 +1,7 @@
 #ifndef LINIAPOLECEN_HPP_INCLUDED
 #define LINIAPOLECEN_HPP_INCLUDED
 
+#include "include/Drzewo.hpp"
 
 class LiniaPolecen
 {
@@ -11,13 +12,11 @@ public:
         char opcja[200];
         struct Token *nastepny;
     } Token;
-    char nazwy[6][20];
-
+    Drzewo drzewo;
     void liniaPolecen();
     Token * dajTokeny(char *opcja, Token *root);
     void usunTokeny(Token *root);
     void wyswietlTokeny(Token *root);
-    void uzupelnijNazwy(char nazwy[6][20]);
 
 };
 
