@@ -225,17 +225,17 @@
 	<string>
 	"Zwierzeta.hpp"
 
-1429393626 source:c:\workcpacecodeb\systematyka\liniapolecen.cpp
+1429396805 source:c:\workcpacecodeb\systematyka\liniapolecen.cpp
 	<iostream>
 	<stdio.h>
 	<string.h>
 	"LiniaPolecen.hpp"
 
-1429395923 c:\workcpacecodeb\systematyka\include\drzewo.hpp
+1429398839 c:\workcpacecodeb\systematyka\include\drzewo.hpp
 	<string>
 	"../OrganizmyZywe.hpp"
 
-1429396017 source:c:\workcpacecodeb\systematyka\src\drzewo.cpp
+1429398942 source:c:\workcpacecodeb\systematyka\src\drzewo.cpp
 	<iostream>
 	"Drzewo.hpp"
 

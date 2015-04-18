@@ -14,7 +14,6 @@ public:
     struct Wezel
     {
         string nazwa;
-        bool czyLisc;
         Wezel *lewy;
         Wezel *prawy;
         OrganizmyZywe *lista;

@@ -22,7 +22,6 @@ void Drzewo::utworzDrzewo()
     wezel->lewy = NULL;
     wezel->prawy = NULL;
     wezel->nazwa = "organizmy";
-    wezel->czyLisc = false;
     wezelPoprz = wezel;
     root = wezel;
 
@@ -32,7 +31,6 @@ void Drzewo::utworzDrzewo()
     wezel->lewy = NULL;
     wezel->prawy = NULL;
     wezel->nazwa = "zwierzeta";
-    wezel->czyLisc = false;
     wezelPoprz->lewy = wezel;
     wezelPoprz = wezel;
 
@@ -40,14 +38,12 @@ void Drzewo::utworzDrzewo()
     wezel->lewy = NULL;
     wezel->prawy = NULL;
     wezel->nazwa = "drapiezniki";
-    wezel->czyLisc = true;
     wezelPoprz->lewy = wezel;
 
     wezel = new Wezel();
     wezel->lewy = NULL;
     wezel->prawy = NULL;
     wezel->nazwa = "roslinozerne";
-    wezel->czyLisc = true;
     wezelPoprz->prawy = wezel;
 
     // rosliny
@@ -58,7 +54,6 @@ void Drzewo::utworzDrzewo()
     wezel->lewy = NULL;
     wezel->prawy = NULL;
     wezel->nazwa = "rosliny";
-    wezel->czyLisc = false;
     wezelPoprz->prawy = wezel;
 
     wezelPoprz = wezel;
@@ -67,14 +62,12 @@ void Drzewo::utworzDrzewo()
     wezel->lewy = NULL;
     wezel->prawy = NULL;
     wezel->nazwa = "nasienne";
-    wezel->czyLisc = true;
     wezelPoprz->prawy = wezel;
 
     wezel = new Wezel();
     wezel->lewy = NULL;
     wezel->prawy = NULL;
     wezel->nazwa = "zarodnikowe";
-    wezel->czyLisc = false;
     wezelPoprz->lewy = wezel;
 
     wezelPoprz = wezel;
@@ -83,14 +76,12 @@ void Drzewo::utworzDrzewo()
     wezel->lewy = NULL;
     wezel->prawy = NULL;
     wezel->nazwa = "paprotniki";
-    wezel->czyLisc = true;
     wezelPoprz->lewy = wezel;
 
     wezel = new Wezel();
     wezel->lewy = NULL;
     wezel->prawy = NULL;
     wezel->nazwa = "mszaki";
-    wezel->czyLisc = false;
     wezelPoprz->prawy = wezel;
 
     wezelPoprz = wezel;
@@ -99,14 +90,12 @@ void Drzewo::utworzDrzewo()
     wezel->lewy = NULL;
     wezel->prawy = NULL;
     wezel->nazwa = "mchy";
-    wezel->czyLisc = true;
     wezelPoprz->lewy = wezel;
 
     wezel = new Wezel();
     wezel->lewy = NULL;
     wezel->prawy = NULL;
     wezel->nazwa = "torfowce";
-    wezel->czyLisc = true;
     wezelPoprz->prawy = wezel;
 
 }
@@ -133,7 +122,8 @@ void Drzewo::rekurWyswietlDrzewo(Wezel* wezel,int wysokosc)
     if(wezel!=NULL)
     {
         wysokosc += 1;
-        cout << string(wysokosc*3, ' ') << wezel->nazwa << ((wezel->czyLisc == true) ? " (lisc)": " ") << endl;
+        cout << string(wysokosc*3, ' ') << wezel->nazwa <<
+        ((wezel->lewy == NULL && wezel->prawy == NULL) ? " (lisc)": " ") << endl;
         rekurWyswietlDrzewo(wezel->lewy, wysokosc);
         rekurWyswietlDrzewo(wezel->prawy, wysokosc);
     }
