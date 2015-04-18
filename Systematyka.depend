@@ -148,3 +148,85 @@
 
 1429227815 c:\users\zuza\gitrepos\systematyka\liniapolecen.hpp
 
+1429384935 source:c:\workcpacecodeb\systematyka\drapiezniki.cpp
+	"Drapiezniki.hpp"
+
+1429384935 c:\workcpacecodeb\systematyka\drapiezniki.hpp
+	"OrganizmyZywe.hpp"
+	"Zwierzeta.hpp"
+
+1429384935 c:\workcpacecodeb\systematyka\organizmyzywe.hpp
+
+1429384936 c:\workcpacecodeb\systematyka\zwierzeta.hpp
+	"OrganizmyZywe.hpp"
+
+1429384936 source:c:\workcpacecodeb\systematyka\main.cpp
+	<iostream>
+	"LiniaPolecen.hpp"
+
+1429384935 c:\workcpacecodeb\systematyka\liniapolecen.hpp
+
+1429384935 source:c:\workcpacecodeb\systematyka\mchy.cpp
+	"Mchy.hpp"
+
+1429384935 c:\workcpacecodeb\systematyka\mchy.hpp
+	"Mszaki.hpp"
+
+1429384935 c:\workcpacecodeb\systematyka\mszaki.hpp
+	"Zarodnikowe.hpp"
+
+1429384936 c:\workcpacecodeb\systematyka\zarodnikowe.hpp
+	"Rosliny.hpp"
+
+1429384936 c:\workcpacecodeb\systematyka\rosliny.hpp
+	"OrganizmyZywe.hpp"
+
+1429384935 source:c:\workcpacecodeb\systematyka\mszaki.cpp
+	"Mszaki.hpp"
+
+1429384935 source:c:\workcpacecodeb\systematyka\nasienne.cpp
+	"Nasienne.hpp"
+
+1429384935 c:\workcpacecodeb\systematyka\nasienne.hpp
+	"Rosliny.hpp"
+
+1429384935 source:c:\workcpacecodeb\systematyka\organizmyzywe.cpp
+	<string>
+	<iostream>
+	"OrganizmyZywe.hpp"
+
+1429384935 source:c:\workcpacecodeb\systematyka\paprotniki.cpp
+	"Paprotniki.hpp"
+
+1429384936 c:\workcpacecodeb\systematyka\paprotniki.hpp
+	"Zarodnikowe.hpp"
+
+1429384936 source:c:\workcpacecodeb\systematyka\roslinozercy.cpp
+	"Roslinozercy.hpp"
+
+1429384936 c:\workcpacecodeb\systematyka\roslinozercy.hpp
+	"Zwierzeta.hpp"
+
+1429384936 source:c:\workcpacecodeb\systematyka\rosliny.cpp
+	"Rosliny.hpp"
+
+1429384936 source:c:\workcpacecodeb\systematyka\torfowce.cpp
+	"Torfowce.hpp"
+
+1429384936 c:\workcpacecodeb\systematyka\torfowce.hpp
+	"Mszaki.hpp"
+
+1429384936 source:c:\workcpacecodeb\systematyka\zarodnikowe.cpp
+	"Zarodnikowe.hpp"
+
+1429384936 source:c:\workcpacecodeb\systematyka\zwierzeta.cpp
+	<iostream>
+	<string>
+	"Zwierzeta.hpp"
+
+1429385770 source:c:\workcpacecodeb\systematyka\liniapolecen.cpp
+	<iostream>
+	<stdio.h>
+	<string.h>
+	"LiniaPolecen.hpp"
+
