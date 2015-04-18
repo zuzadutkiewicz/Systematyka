@@ -10,7 +10,7 @@ Drzewo::Drzewo()
 
 Drzewo::~Drzewo()
 {
-    //dtor
+    usunWszystko();
 }
 
 void Drzewo::utworzDrzewo()
@@ -181,3 +181,26 @@ void Drzewo::rekurUstawAktualnyWezel(Wezel *wezel, string nazwaWezla)
         }
     }
 }
+
+void Drzewo::usunWszystko()
+{
+    Wezel* wezel = this->root;
+    if(wezel!=NULL)
+    {
+        rekurUsunWszystko(wezel->lewy);
+        rekurUsunWszystko(wezel->prawy);
+        delete(wezel);
+    }
+    this->root = NULL;
+}
+
+void Drzewo::rekurUsunWszystko(Wezel* wezel)
+{
+    if(wezel!=NULL)
+    {
+        rekurUsunWszystko(wezel->lewy);
+        rekurUsunWszystko(wezel->prawy);
+        delete(wezel);
+    }
+}
+

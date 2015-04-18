@@ -32,6 +32,8 @@ private:
     Wezel *aktualny;
     void rekurWyswietlDrzewo(Wezel *wezel, int wysokosc);
     void rekurUstawAktualnyWezel(Wezel *wezel, string nazwaWezla);
+    void usunWszystko();
+    void rekurUsunWszystko(Wezel* wezel);
 };
 
 #endif // DRZEWO_H

@@ -231,11 +231,11 @@
 	<string.h>
 	"LiniaPolecen.hpp"
 
-1429394092 c:\workcpacecodeb\systematyka\include\drzewo.hpp
+1429395923 c:\workcpacecodeb\systematyka\include\drzewo.hpp
 	<string>
 	"../OrganizmyZywe.hpp"
 
-1429394595 source:c:\workcpacecodeb\systematyka\src\drzewo.cpp
+1429396017 source:c:\workcpacecodeb\systematyka\src\drzewo.cpp
 	<iostream>
 	"Drzewo.hpp"
 
