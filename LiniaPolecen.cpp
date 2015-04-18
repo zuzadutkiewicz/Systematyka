@@ -88,7 +88,7 @@ void LiniaPolecen::liniaPolecen()
 LiniaPolecen::Token * LiniaPolecen::dajTokeny(char opcja[], Token *root)
 {
     int i = 0;
-    int j = 0;
+    int j = -1;
     Token *token = NULL;
 
     while ((opcja[i] != '\0') && (i <= 200))
@@ -96,10 +96,11 @@ LiniaPolecen::Token * LiniaPolecen::dajTokeny(char opcja[], Token *root)
 //        if (isupper(opcja[i]))
         if (isalpha(opcja[i]) || isdigit(opcja[i]))
         {
-            if (j == 0)
+            if (j == -1)
             {
                 Token *poprzedni = token;
                 token = new Token();
+                j = 0;
                 token->nastepny = NULL;
                 if (root == NULL)
                     root = token;
@@ -111,11 +112,11 @@ LiniaPolecen::Token * LiniaPolecen::dajTokeny(char opcja[], Token *root)
         }
         else
         {
-            if (root != NULL)
+            if (token != NULL && j != -1)
             {
                 token->opcja[j] = '\0';
             }
-            j = 0;
+            j = -1;
         }
         i++;
     }
