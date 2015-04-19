@@ -208,7 +208,7 @@ void Drzewo::dodajDoAktualny()
     cout << "Opcja niedostepna" << endl;
 }
 
-void Drzewo::usunZAktualny()
+void Drzewo::usunZAktualny(string nazwaObiektu)
 {
     if(jestLisciem(aktualny) == false)
     {
