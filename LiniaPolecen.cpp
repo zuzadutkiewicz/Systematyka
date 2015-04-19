@@ -57,17 +57,20 @@ void LiniaPolecen::liniaPolecen()
         }
         else if(root != NULL && strcmp(root->opcja, "tree") == 0 )
         {
-            if(root->nastepny != NULL)
+            if(root->nastepny != NULL && root->nastepny->nastepny != NULL)
                 printf("Blad: za duzo parametrow\n");
             else
-                drzewo.wyswietlDrzewo();
+                if(root->nastepny == NULL)
+                    drzewo.wyswietlDrzewo();
+                else
+                    drzewo.wyswietlDrzewo(string(root->nastepny->opcja));
         }
         else if(root != NULL && strcmp(root->opcja, "dir") == 0 )
         {
             if(root->nastepny != NULL)
                 printf("Blad: za duzo parametrow\n");
             else
-                cout << "Opcja niedostepna" << endl;
+                drzewo.wyswietlWszystkieZAltualny();
         }
         else if(root != NULL && strcmp(root->opcja, "read") == 0 )
         {
@@ -83,6 +86,7 @@ void LiniaPolecen::liniaPolecen()
             else
                 cout << "Opcja niedostepna" << endl;
         }
+        // tworzenie obiektu do aktualnego wezla - mo
         else if(root != NULL && strcmp(root->opcja, "mo") == 0 )
         {
             if(root->nastepny == NULL)
@@ -90,8 +94,9 @@ void LiniaPolecen::liniaPolecen()
             else if(root->nastepny->nastepny != NULL)
                 printf("Blad: za duzo parametrow\n");
             else
-                cout << "Opcja niedostepna" << endl;
+                drzewo.dodajDoAktualny();
         }
+        // usuwanie obiektu o danej nazwie - do
         else if(root != NULL && strcmp(root->opcja, "do") == 0 )
         {
             if(root->nastepny == NULL)
@@ -99,8 +104,9 @@ void LiniaPolecen::liniaPolecen()
             else if(root->nastepny->nastepny != NULL)
                 printf("Blad: za duzo parametrow\n");
             else
-                cout << "Opcja niedostepna" << endl;
+                drzewo.usunZAktualny(string(root->nastepny->opcja));
         }
+        // modyfikacja obiektu o danej nazwie - mdo
         else if(root != NULL && strcmp(root->opcja, "mdo") == 0 )
         {
             if(root->nastepny == NULL)
@@ -110,15 +116,22 @@ void LiniaPolecen::liniaPolecen()
             else
                 cout << "Opcja niedostepna" << endl;
         }
+        // wyswietlenie szczegolowych informacji o obiekcie - show
         else if(root != NULL && strcmp(root->opcja, "show") == 0 )
         {
-            if(root->nastepny == NULL)
-                printf("Blad: brak parametru\n");
-            else if(root->nastepny->nastepny != NULL)
+            if(root->nastepny != NULL && root->nastepny->nastepny != NULL)
+                printf("Blad: za duzo parametrow\n");
+            else if(root->nastepny == NULL)
+                drzewo.wyswietlWszystkieZAltualny();
+            else
+                drzewo.wyswietlObiektZAktualny();
+        }
+        else if(root != NULL && strcmp(root->opcja, "help") == 0 )
+            if(root->nastepny != NULL)
                 printf("Blad: za duzo parametrow\n");
             else
-                cout << "Opcja niedostepna" << endl;
-        }
+                help();
+
         else
         {
             if(root != NULL )
@@ -191,4 +204,22 @@ void LiniaPolecen::wyswietlTokeny(Token *root)
         aktualny = aktualny->nastepny;
     }
     printf("NULL\n");
+}
+
+void LiniaPolecen::help()
+{
+    cout << "Dostepne komendy:" << endl;
+    cout << "  help - wyswietlenie ta pomocy" << endl;
+    cout << "  exit - wyjscie z z programu" << endl;
+    cout << "  cd wezel - ustawia aktualny wezel" << endl;
+    cout << "  mo obiekt - tworzy \"obiekt\" dla biezacego liœcia" << endl;
+    cout << "  do obiekt - usuwa \"obiekt\" dla biezacego liscia" << endl;
+    cout << "  mdo obiekt – modyfikuje \"obiekt\" dla biezacego liscia" << endl;
+    cout << "  show obiekt – wyswietla szczeglowe informacje o \"obiekt\"" << endl;
+    cout << "  dir - wyœwietla informacje o obiektach widocznych z biezacego poziomu" << endl;
+    cout << "  save – zapis zbioru do pliku" << endl;
+    cout << "  read – odczyt zbioru z pliku" << endl;
+    cout << "  tree [wezel] - wyswietla strukture calego drzewa lub od \"wezel\"" << endl;
+    cout << "  cur  - wyswietla aktualny wezel" << endl;
+    cout << "  debug [0|1] - wylacza/wlacza tryb debugowania (domyslnie 0) " << endl;
 }

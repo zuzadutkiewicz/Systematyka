@@ -17,6 +17,7 @@ public:
     Token * dajTokeny(char *opcja, Token *root);
     void usunTokeny(Token *root);
     void wyswietlTokeny(Token *root);
+    void help();
 
 };
 

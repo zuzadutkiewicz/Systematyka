@@ -21,8 +21,10 @@ void Drzewo::utworzDrzewo()
     wezel = new Wezel();
     wezel->lewy = NULL;
     wezel->prawy = NULL;
+    wezel->lista = NULL;
     wezel->nazwa = "organizmy";
     wezelPoprz = wezel;
+
     root = wezel;
 
     // galaz zwierzat
@@ -30,6 +32,7 @@ void Drzewo::utworzDrzewo()
     wezel = new Wezel();
     wezel->lewy = NULL;
     wezel->prawy = NULL;
+    wezel->lista = NULL;
     wezel->nazwa = "zwierzeta";
     wezelPoprz->lewy = wezel;
     wezelPoprz = wezel;
@@ -37,6 +40,7 @@ void Drzewo::utworzDrzewo()
     wezel = new Wezel();
     wezel->lewy = NULL;
     wezel->prawy = NULL;
+    wezel->lista = NULL;
     wezel->nazwa = "drapiezniki";
     wezelPoprz->lewy = wezel;
 
@@ -53,6 +57,7 @@ void Drzewo::utworzDrzewo()
     wezel = new Wezel();
     wezel->lewy = NULL;
     wezel->prawy = NULL;
+    wezel->lista = NULL;
     wezel->nazwa = "rosliny";
     wezelPoprz->prawy = wezel;
 
@@ -61,12 +66,14 @@ void Drzewo::utworzDrzewo()
     wezel = new Wezel();
     wezel->lewy = NULL;
     wezel->prawy = NULL;
+    wezel->lista = NULL;
     wezel->nazwa = "nasienne";
     wezelPoprz->prawy = wezel;
 
     wezel = new Wezel();
     wezel->lewy = NULL;
     wezel->prawy = NULL;
+    wezel->lista = NULL;
     wezel->nazwa = "zarodnikowe";
     wezelPoprz->lewy = wezel;
 
@@ -75,12 +82,14 @@ void Drzewo::utworzDrzewo()
     wezel = new Wezel();
     wezel->lewy = NULL;
     wezel->prawy = NULL;
+    wezel->lista = NULL;
     wezel->nazwa = "paprotniki";
     wezelPoprz->lewy = wezel;
 
     wezel = new Wezel();
     wezel->lewy = NULL;
     wezel->prawy = NULL;
+    wezel->lista = NULL;
     wezel->nazwa = "mszaki";
     wezelPoprz->prawy = wezel;
 
@@ -89,12 +98,14 @@ void Drzewo::utworzDrzewo()
     wezel = new Wezel();
     wezel->lewy = NULL;
     wezel->prawy = NULL;
+    wezel->lista = NULL;
     wezel->nazwa = "mchy";
     wezelPoprz->lewy = wezel;
 
     wezel = new Wezel();
     wezel->lewy = NULL;
     wezel->prawy = NULL;
+    wezel->lista = NULL;
     wezel->nazwa = "torfowce";
     wezelPoprz->prawy = wezel;
 
@@ -102,20 +113,17 @@ void Drzewo::utworzDrzewo()
 
 void Drzewo::wyswietlDrzewo()
 {
-    int wysokosc = 1;
-    Wezel* wezel = root;
-    if (wezel == NULL)
-        return;
-
-    if(wezel!=NULL)
-    {
-        cout << string(wysokosc*3, ' ') << wezel->nazwa << endl;
-        rekurWyswietlDrzewo(wezel->lewy, wysokosc);
-        rekurWyswietlDrzewo(wezel->prawy, wysokosc);
-    }
-
+  rekurWyswietlDrzewo(root, 0);
 }
 
+void Drzewo::wyswietlDrzewo(string nazwaWezla)
+{
+    Wezel *wezel = rekurDajWezel(root, nazwaWezla);
+    if(wezel == NULL)
+        cout << "Niepoprawna nazwa wezla " << nazwaWezla << endl;
+    else
+        rekurWyswietlDrzewo(wezel, 0);
+}
 void Drzewo::rekurWyswietlDrzewo(Wezel* wezel,int wysokosc)
 {
 
@@ -123,7 +131,7 @@ void Drzewo::rekurWyswietlDrzewo(Wezel* wezel,int wysokosc)
     {
         wysokosc += 1;
         cout << string(wysokosc*3, ' ') << wezel->nazwa <<
-        ((wezel->lewy == NULL && wezel->prawy == NULL) ? " (lisc)": " ") << endl;
+        (jestLisciem(wezel) ? " (lisc)": " ") << endl;
         rekurWyswietlDrzewo(wezel->lewy, wysokosc);
         rekurWyswietlDrzewo(wezel->prawy, wysokosc);
     }
@@ -138,49 +146,36 @@ string Drzewo::dajNazwaAktualny()
 
 void Drzewo::ustawAktualnyWezel(string nazwaWezla)
 {
-    Wezel* wezel = root;
-    Wezel* aktualnyOld = aktualny;
-    aktualny = NULL;
-    if(wezel != NULL)
-    {
-        if (nazwaWezla.compare(wezel->nazwa) == 0)
-            aktualny = wezel;
-        else
-        {
-            rekurUstawAktualnyWezel(wezel->lewy, nazwaWezla);
-            rekurUstawAktualnyWezel(wezel->prawy, nazwaWezla);
-        }
-    }
-    if(aktualny ==  NULL)
-    {
-        aktualny = aktualnyOld;
+    Wezel* wezel = NULL;
+
+    wezel = rekurDajWezel(root, nazwaWezla);
+    if(wezel == NULL)
         cout << "Niepoprawna nazwa wezla: " << nazwaWezla << endl;
-    }
+    else
+        aktualny = wezel;
+
 }
 
-void Drzewo::rekurUstawAktualnyWezel(Wezel *wezel, string nazwaWezla)
+Drzewo::Wezel* Drzewo::rekurDajWezel(Wezel *wezel, string nazwaWezla)
 {
+    Wezel *wezel1 = NULL;
+    Wezel *wezel2 = NULL;
     if(wezel != NULL)
     {
         if (nazwaWezla.compare(wezel->nazwa) == 0)
-            aktualny = wezel;
+            return wezel;
         else
         {
-            rekurUstawAktualnyWezel(wezel->lewy, nazwaWezla);
-            rekurUstawAktualnyWezel(wezel->prawy, nazwaWezla);
+            wezel1 = rekurDajWezel(wezel->lewy, nazwaWezla);
+            wezel2 = rekurDajWezel(wezel->prawy, nazwaWezla);
         }
     }
+    return  ((wezel1 != NULL )? wezel1 : wezel2);
 }
 
 void Drzewo::usunWszystko()
 {
-    Wezel* wezel = this->root;
-    if(wezel!=NULL)
-    {
-        rekurUsunWszystko(wezel->lewy);
-        rekurUsunWszystko(wezel->prawy);
-        delete(wezel);
-    }
+    rekurUsunWszystko(this->root);
     this->root = NULL;
 }
 
@@ -194,3 +189,50 @@ void Drzewo::rekurUsunWszystko(Wezel* wezel)
     }
 }
 
+bool Drzewo::jestLisciem(Wezel* wezel)
+{
+    if( (wezel->lewy == NULL && wezel->prawy == NULL) )
+        return true;
+    return false;
+}
+
+void Drzewo::dodajDoAktualny()
+{
+    if(jestLisciem(aktualny) == false)
+    {
+        cout << "Wezel " << aktualny->nazwa << " nie jest lisciem. "
+             << " Operacja niedostepna." << endl;
+        return;
+    }
+
+    cout << "Opcja niedostepna" << endl;
+}
+
+void Drzewo::usunZAktualny()
+{
+    if(jestLisciem(aktualny) == false)
+    {
+        cout << "Wezel " << aktualny->nazwa << " nie jest lisciem. "
+             << " Operacja niedostepna." << endl;
+        return;
+    }
+
+    cout << "Opcja niedostepna" << endl;
+}
+
+void Drzewo::wyswietlWszystkieZAltualny()
+{
+    cout << "Opcja niedostepna" << endl;
+}
+
+void Drzewo::wyswietlObiektZAktualny(string nazwaObiektu)
+{
+    if(jestLisciem(aktualny) == false)
+    {
+        cout << "Wezel " << aktualny->nazwa << " nie jest lisciem. "
+             << " Operacja niedostepna." << endl;
+        return;
+    }
+    cout << "Opcja niedostepna" << endl;
+
+}

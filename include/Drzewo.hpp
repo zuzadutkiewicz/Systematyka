@@ -23,16 +23,25 @@ public:
     virtual ~Drzewo();
     void utworzDrzewo();
     void wyswietlDrzewo();
+    void wyswietlDrzewo(string nazwaWezla);
     string dajNazwaAktualny();
     void ustawAktualnyWezel(string nazwaWezla);
+    void dodajDoAktualny();
+    void usunZAktualny(string nazwaObiektu);
+    void wyswietlWszystkieZAltualny();
+    void wyswietlObiektZAktualny(string nazwaObiektu);
+
 
 protected:
 private:
     Wezel *aktualny;
     void rekurWyswietlDrzewo(Wezel *wezel, int wysokosc);
-    void rekurUstawAktualnyWezel(Wezel *wezel, string nazwaWezla);
+    Wezel* rekurDajWezel(Wezel *wezel, string nazwaWezla);
     void usunWszystko();
     void rekurUsunWszystko(Wezel* wezel);
+    bool jestLisciem(Wezel* wezel);
+    Wezel* dajWezel(string nazwaWezla);
+
 };
 
 #endif // DRZEWO_H
