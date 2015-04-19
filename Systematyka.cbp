@@ -34,8 +34,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Drapiezniki.cpp" />
-		<Unit filename="Drapiezniki.hpp" />
+		<Unit filename="Jajorodne.cpp" />
+		<Unit filename="Jajorodne.hpp" />
 		<Unit filename="LiniaPolecen.cpp" />
 		<Unit filename="LiniaPolecen.hpp" />
 		<Unit filename="Mchy.cpp" />
@@ -48,8 +48,6 @@
 		<Unit filename="OrganizmyZywe.hpp" />
 		<Unit filename="Paprotniki.cpp" />
 		<Unit filename="Paprotniki.hpp" />
-		<Unit filename="Roslinozercy.cpp" />
-		<Unit filename="Roslinozercy.hpp" />
 		<Unit filename="Rosliny.cpp" />
 		<Unit filename="Rosliny.hpp" />
 		<Unit filename="Torfowce.cpp" />
@@ -58,6 +56,8 @@
 		<Unit filename="Zarodnikowe.hpp" />
 		<Unit filename="Zwierzeta.cpp" />
 		<Unit filename="Zwierzeta.hpp" />
+		<Unit filename="Zyworodne.cpp" />
+		<Unit filename="Zyworodne.hpp" />
 		<Unit filename="include/Drzewo.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Drzewo.cpp" />

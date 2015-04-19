@@ -41,13 +41,13 @@ void Drzewo::utworzDrzewo()
     wezel->lewy = NULL;
     wezel->prawy = NULL;
     wezel->lista = NULL;
-    wezel->nazwa = "drapiezniki";
+    wezel->nazwa = "zyworodne";
     wezelPoprz->lewy = wezel;
 
     wezel = new Wezel();
     wezel->lewy = NULL;
     wezel->prawy = NULL;
-    wezel->nazwa = "roslinozerne";
+    wezel->nazwa = "jajorodne";
     wezelPoprz->prawy = wezel;
 
     // rosliny

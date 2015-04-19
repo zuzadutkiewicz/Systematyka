@@ -4,7 +4,7 @@
 #include "OrganizmyZywe.hpp"
 #include "Zwierzeta.hpp"
 
-class Drapiezniki : public Zwierzeta
+class Zyworodne : public Zwierzeta
 {
 public:
     void poluj();

@@ -3,7 +3,7 @@
 
 #include "Zwierzeta.hpp"
 
-class Roslinozercy : public Zwierzeta
+class Jajorodne : public Zwierzeta
 {
 public:
     void szukajJedzenia();
