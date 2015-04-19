@@ -124,7 +124,7 @@ void LiniaPolecen::liniaPolecen()
             else if(root->nastepny == NULL)
                 drzewo.wyswietlWszystkieZAltualny();
             else
-                drzewo.wyswietlObiektZAktualny();
+                drzewo.wyswietlObiektZAktualny(root->nastepny->opcja);
         }
         else if(root != NULL && strcmp(root->opcja, "help") == 0 )
             if(root->nastepny != NULL)
