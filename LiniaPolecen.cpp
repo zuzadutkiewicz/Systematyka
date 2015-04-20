@@ -211,12 +211,12 @@ void LiniaPolecen::help()
     cout << "Dostepne komendy:" << endl;
     cout << "  help - wyswietlenie ta pomocy" << endl;
     cout << "  exit - wyjscie z z programu" << endl;
-    cout << "  cd wezel - ustawia aktualny wezel" << endl;
-    cout << "  mo obiekt - tworzy \"obiekt\" dla biezacego liœcia" << endl;
-    cout << "  do obiekt - usuwa \"obiekt\" dla biezacego liscia" << endl;
-    cout << "  mdo obiekt – modyfikuje \"obiekt\" dla biezacego liscia" << endl;
+    cout << "  cd wezel - ustawia \"wezel\" jako biezacy" << endl;
+    cout << "  mo obiekt - tworzy \"obiekt\" dla biezacego wezla-liscia" << endl;
+    cout << "  do obiekt - usuwa \"obiekt\" dla biezacego wezla-liscia" << endl;
+    cout << "  mdo obiekt – modyfikuje \"obiekt\" dla biezacego wezla-liscia" << endl;
     cout << "  show obiekt – wyswietla szczeglowe informacje o \"obiekt\"" << endl;
-    cout << "  dir - wyœwietla informacje o obiektach widocznych z biezacego poziomu" << endl;
+    cout << "  dir - wyswietla informacje o obiektach widocznych z biezacego poziomu" << endl;
     cout << "  save – zapis zbioru do pliku" << endl;
     cout << "  read – odczyt zbioru z pliku" << endl;
     cout << "  tree [wezel] - wyswietla strukture calego drzewa lub od \"wezel\"" << endl;

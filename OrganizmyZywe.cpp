@@ -25,9 +25,9 @@ void OrganizmyZywe::rozmnazanie()
 
 void OrganizmyZywe::edytuj ()
 {
-    printf("Jak nazywa sie ten organizm?\n");
+    printf("Jak nazywa sie ten organizm? ");
     scanf("%s", nazwa);
-    printf("Co lubi ten orgaznim?\n");
+    printf("Co lubi ten orgaznim? ");
     scanf("%s", coLubi);
 
 }

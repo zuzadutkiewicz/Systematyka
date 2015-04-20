@@ -38,7 +38,8 @@ public:
     void usunZAktualny(string nazwaObiektu);
     void wyswietlWszystkieZAltualny();
     void wyswietlObiektZAktualny(string nazwaObiektu);
-    dajObiektLisc(string nazwaObiektu);
+    OrganizmyZywe* dajObiektLisc(string nazwaObiektu);
+
 
 
 protected:

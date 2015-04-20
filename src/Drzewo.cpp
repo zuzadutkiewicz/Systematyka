@@ -238,7 +238,7 @@ void Drzewo::wyswietlObiektZAktualny(string nazwaObiektu)
 
 }
 
-Drzewo::OrganizmyZywe Drzewo::dajObiektLisc(string nazwaObiektu)
+OrganizmyZywe* Drzewo::dajObiektLisc(string nazwaObiektu)
 {
     if (nazwaObiektu.compare("jajorodne"))
     {
@@ -263,6 +263,11 @@ Drzewo::OrganizmyZywe Drzewo::dajObiektLisc(string nazwaObiektu)
     else if (nazwaObiektu.compare("torfowce"))
     {
         return new Torfowce();
+    }
+    else
+    {
+        printf("Drzewo::dajObiektLisc: Niepoprawna nazwa obiektu.");
+        return NULL;
     }
 }
 
