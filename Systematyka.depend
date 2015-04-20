@@ -73,7 +73,7 @@
 	"OrganizmyZywe.hpp"
 	"Zwierzeta.hpp"
 
-1429479555 c:\users\zuza\gitrepos\systematyka\organizmyzywe.hpp
+1429543103 c:\users\zuza\gitrepos\systematyka\organizmyzywe.hpp
 	<stdlib.h>
 	<iostream>
 	<stdio.h>
@@ -111,7 +111,7 @@
 1429097889 c:\users\zuza\gitrepos\systematyka\nasienne.hpp
 	"Rosliny.hpp"
 
-1429479662 source:c:\users\zuza\gitrepos\systematyka\organizmyzywe.cpp
+1429543146 source:c:\users\zuza\gitrepos\systematyka\organizmyzywe.cpp
 	<string>
 	<iostream>
 	"OrganizmyZywe.hpp"
@@ -245,9 +245,15 @@
 	<iostream>
 	"Drzewo.hpp"
 
-1429429102 c:\users\zuza\gitrepos\systematyka\include\drzewo.hpp
+1429550765 c:\users\zuza\gitrepos\systematyka\include\drzewo.hpp
 	<string>
 	"../OrganizmyZywe.hpp"
+	"../Jajorodne.hpp"
+	"../Zyworodne.hpp"
+	"../Nasienne.hpp"
+	"../Paprotniki.hpp"
+	"../Mchy.hpp"
+	"../Torfowce.hpp"
 
 1429475305 source:c:\users\zuza\gitrepos\systematyka\src\drzewo.cpp
 	<iostream>

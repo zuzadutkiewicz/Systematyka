@@ -13,8 +13,8 @@ class OrganizmyZywe
 public:
     void jedz();
     void rozmnazanie();
-    char nazwa;
-    char coLubi;
+    char nazwa [100];
+    char coLubi [100];
     virtual void edytuj();
     virtual void wyswietl();
     virtual void wyswietlWszy();

@@ -4,6 +4,14 @@
 #include <string>
 
 #include "../OrganizmyZywe.hpp"
+#include "../Jajorodne.hpp"
+#include "../Zyworodne.hpp"
+#include "../Nasienne.hpp"
+#include "../Paprotniki.hpp"
+#include "../Mchy.hpp"
+#include "../Torfowce.hpp"
+
+
 
 using namespace std;
 
@@ -30,6 +38,7 @@ public:
     void usunZAktualny(string nazwaObiektu);
     void wyswietlWszystkieZAltualny();
     void wyswietlObiektZAktualny(string nazwaObiektu);
+    dajObiektLisc(string nazwaObiektu);
 
 
 protected:
