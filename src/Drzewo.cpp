@@ -2,6 +2,7 @@
 
 #include "Drzewo.hpp"
 
+
 Drzewo::Drzewo()
 {
     utworzDrzewo();
@@ -41,13 +42,13 @@ void Drzewo::utworzDrzewo()
     wezel->lewy = NULL;
     wezel->prawy = NULL;
     wezel->lista = NULL;
-    wezel->nazwa = "drapiezniki";
+    wezel->nazwa = "zyworodne";
     wezelPoprz->lewy = wezel;
 
     wezel = new Wezel();
     wezel->lewy = NULL;
     wezel->prawy = NULL;
-    wezel->nazwa = "roslinozerne";
+    wezel->nazwa = "jajorodne";
     wezelPoprz->prawy = wezel;
 
     // rosliny
@@ -113,7 +114,7 @@ void Drzewo::utworzDrzewo()
 
 void Drzewo::wyswietlDrzewo()
 {
-  rekurWyswietlDrzewo(root, 0);
+    rekurWyswietlDrzewo(root, 0);
 }
 
 void Drzewo::wyswietlDrzewo(string nazwaWezla)
@@ -131,7 +132,7 @@ void Drzewo::rekurWyswietlDrzewo(Wezel* wezel,int wysokosc)
     {
         wysokosc += 1;
         cout << string(wysokosc*3, ' ') << wezel->nazwa <<
-        (jestLisciem(wezel) ? " (lisc)": " ") << endl;
+             (jestLisciem(wezel) ? " (lisc)": " ") << endl;
         rekurWyswietlDrzewo(wezel->lewy, wysokosc);
         rekurWyswietlDrzewo(wezel->prawy, wysokosc);
     }
@@ -236,3 +237,32 @@ void Drzewo::wyswietlObiektZAktualny(string nazwaObiektu)
     cout << "Opcja niedostepna" << endl;
 
 }
+
+Drzewo::OrganizmyZywe Drzewo::dajObiektLisc(string nazwaObiektu)
+{
+    if (nazwaObiektu.compare("jajorodne"))
+    {
+        return new Jajorodne();
+    }
+    else if (nazwaObiektu.compare("zyworodne"))
+    {
+        return new Zyworodne();
+    }
+    else if (nazwaObiektu.compare("nasienne"))
+    {
+        return new Nasienne();
+    }
+    else if (nazwaObiektu.compare("paprotniki"))
+    {
+        return new Paprotniki();
+    }
+    else if (nazwaObiektu.compare("mchy"))
+    {
+        return new Mchy();
+    }
+    else if (nazwaObiektu.compare("torfowce"))
+    {
+        return new Torfowce();
+    }
+}
+
