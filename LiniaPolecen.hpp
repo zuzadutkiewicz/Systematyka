@@ -14,7 +14,7 @@ public:
     } Token;
     Drzewo drzewo;
     void liniaPolecen();
-    Token * dajTokeny(char *opcja, Token *root);
+    Token * dajTokeny(const char *opcja, Token *root);
     void usunTokeny(Token *root);
     void wyswietlTokeny(Token *root);
     void help();

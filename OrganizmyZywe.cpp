@@ -25,20 +25,22 @@ void OrganizmyZywe::rozmnazanie()
 
 void OrganizmyZywe::edytuj ()
 {
-    printf("Jak nazywa sie ten organizm? ");
-    scanf("%s", nazwa);
-    printf("Co lubi ten orgaznim? ");
-    scanf("%s", coLubi);
+
+    cout << "Jak ma na imie ten organizm? ";
+    getline( cin, imie);
+    cout << "Co lubi ten orgaznim? ";
+    getline( cin, coLubi);
 
 }
 
 void OrganizmyZywe::wyswietl()
 {
-    printf("Nazwa tego organizmu to: %s\n", nazwa);
+    cout << "Nazwa organizmu: " << nazwa << endl;
 }
 
 void OrganizmyZywe::wyswietlWszy()
 {
-    printf("Nazwa organizmu to: %s\n", nazwa);
-    printf("Organizm ten lubi: %s\n", coLubi);
+    cout << "Nazwa organizmu: " << nazwa << endl;
+    cout << "Imie organizmu: " << imie << endl;
+    cout << "Organizm ten lubi: " << coLubi << endl;
 }

@@ -34,9 +34,13 @@ public:
     void wyswietlDrzewo(string nazwaWezla);
     string dajNazwaAktualny();
     void ustawAktualnyWezel(string nazwaWezla);
-    void dodajDoAktualny();
+    void dodajDoAktualny(string nazwa);
     void usunZAktualny(string nazwaObiektu);
+    void edytujZAktualny(string nazwaObiektu);
     void wyswietlWszystkieZAltualny();
+    void wyswietlWszystkieZWezla();
+    void wyswietlWszystkieZWezlaLiscia(Wezel *wezel);
+    void rekurWyswietlWszystkieZWezla(Wezel* wezel,int wysokosc);
     void wyswietlObiektZAktualny(string nazwaObiektu);
     OrganizmyZywe* dajObiektLisc(string nazwaObiektu);
 

@@ -73,16 +73,16 @@
 	"OrganizmyZywe.hpp"
 	"Zwierzeta.hpp"
 
-1429543103 c:\users\zuza\gitrepos\systematyka\organizmyzywe.hpp
+1429650683 c:\users\zuza\gitrepos\systematyka\organizmyzywe.hpp
 	<stdlib.h>
 	<iostream>
 	<stdio.h>
-	<string.h>
+	<string>
 
 1429097260 c:\users\zuza\gitrepos\systematyka\zwierzeta.hpp
 	"OrganizmyZywe.hpp"
 
-1429479527 source:c:\users\zuza\gitrepos\systematyka\main.cpp
+1429649217 source:c:\users\zuza\gitrepos\systematyka\main.cpp
 	<iostream>
 	"LiniaPolecen.hpp"
 	"OrganizmyZywe.hpp"
@@ -111,7 +111,7 @@
 1429097889 c:\users\zuza\gitrepos\systematyka\nasienne.hpp
 	"Rosliny.hpp"
 
-1429543146 source:c:\users\zuza\gitrepos\systematyka\organizmyzywe.cpp
+1429655420 source:c:\users\zuza\gitrepos\systematyka\organizmyzywe.cpp
 	<string>
 	<iostream>
 	"OrganizmyZywe.hpp"
@@ -145,13 +145,13 @@
 	<string>
 	"Zwierzeta.hpp"
 
-1429429308 source:c:\users\zuza\gitrepos\systematyka\liniapolecen.cpp
+1429654465 source:c:\users\zuza\gitrepos\systematyka\liniapolecen.cpp
 	<iostream>
 	<stdio.h>
 	<string.h>
 	"LiniaPolecen.hpp"
 
-1429429102 c:\users\zuza\gitrepos\systematyka\liniapolecen.hpp
+1429651527 c:\users\zuza\gitrepos\systematyka\liniapolecen.hpp
 	"include/Drzewo.hpp"
 
 1429384935 source:c:\workcpacecodeb\systematyka\drapiezniki.cpp
@@ -245,7 +245,7 @@
 	<iostream>
 	"Drzewo.hpp"
 
-1429550765 c:\users\zuza\gitrepos\systematyka\include\drzewo.hpp
+1429655144 c:\users\zuza\gitrepos\systematyka\include\drzewo.hpp
 	<string>
 	"../OrganizmyZywe.hpp"
 	"../Jajorodne.hpp"
@@ -255,7 +255,7 @@
 	"../Mchy.hpp"
 	"../Torfowce.hpp"
 
-1429475305 source:c:\users\zuza\gitrepos\systematyka\src\drzewo.cpp
+1429655647 source:c:\users\zuza\gitrepos\systematyka\src\drzewo.cpp
 	<iostream>
 	"Drzewo.hpp"
 

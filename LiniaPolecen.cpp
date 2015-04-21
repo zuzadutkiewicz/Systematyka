@@ -7,16 +7,14 @@
 
 void LiniaPolecen::liniaPolecen()
 {
-    char opcja [200];
+    string linia;
     Token *root = NULL;
     int debug = 0;
     while (true)
     {
-        printf("%s $ ", drzewo.dajNazwaAktualny().c_str());
-        opcja[0] = '\0';
-        scanf("%[^\n]*", opcja);
-        getchar();
-        root = dajTokeny(opcja, root);
+        cout << drzewo.dajNazwaAktualny() <<  " $ ";
+        getline( cin, linia);
+        root = dajTokeny(linia.c_str(), root);
         if(debug == 1)
             wyswietlTokeny(root);
         if(root != NULL && strcmp(root->opcja, "exit") == 0 )
@@ -70,7 +68,7 @@ void LiniaPolecen::liniaPolecen()
             if(root->nastepny != NULL)
                 printf("Blad: za duzo parametrow\n");
             else
-                drzewo.wyswietlWszystkieZAltualny();
+                drzewo.wyswietlWszystkieZWezla();
         }
         else if(root != NULL && strcmp(root->opcja, "read") == 0 )
         {
@@ -94,7 +92,7 @@ void LiniaPolecen::liniaPolecen()
             else if(root->nastepny->nastepny != NULL)
                 printf("Blad: za duzo parametrow\n");
             else
-                drzewo.dodajDoAktualny();
+                drzewo.dodajDoAktualny(string(root->nastepny->opcja));
         }
         // usuwanie obiektu o danej nazwie - do
         else if(root != NULL && strcmp(root->opcja, "do") == 0 )
@@ -114,7 +112,7 @@ void LiniaPolecen::liniaPolecen()
             else if(root->nastepny->nastepny != NULL)
                 printf("Blad: za duzo parametrow\n");
             else
-                cout << "Opcja niedostepna" << endl;
+                drzewo.edytujZAktualny(string(root->nastepny->opcja));
         }
         // wyswietlenie szczegolowych informacji o obiekcie - show
         else if(root != NULL && strcmp(root->opcja, "show") == 0 )
@@ -142,7 +140,7 @@ void LiniaPolecen::liniaPolecen()
     }
 }
 
-LiniaPolecen::Token * LiniaPolecen::dajTokeny(char opcja[], Token *root)
+LiniaPolecen::Token * LiniaPolecen::dajTokeny(const char opcja[], Token *root)
 {
     int i = 0;
     int j = -1;

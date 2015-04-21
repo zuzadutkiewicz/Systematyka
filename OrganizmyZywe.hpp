@@ -4,17 +4,19 @@
 #include <stdlib.h>
 #include <iostream>
 #include <stdio.h>
-#include <string.h>
+#include <string>
 
-
+using namespace std;
 
 class OrganizmyZywe
 {
 public:
+    OrganizmyZywe *nastepny;
     void jedz();
     void rozmnazanie();
-    char nazwa [100];
-    char coLubi [100];
+    string nazwa;
+    string imie;
+    string coLubi;
     virtual void edytuj();
     virtual void wyswietl();
     virtual void wyswietlWszy();

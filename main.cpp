@@ -9,8 +9,8 @@ int main()
 {
     LiniaPolecen liniaPolecen = LiniaPolecen();
     liniaPolecen.liniaPolecen();
-    OrganizmyZywe organizmyZywe = OrganizmyZywe();
+    /*OrganizmyZywe organizmyZywe = OrganizmyZywe();
     organizmyZywe.edytuj();
     organizmyZywe.wyswietl();
-    organizmyZywe.wyswietlWszy();
+    organizmyZywe.wyswietlWszy();*/
 }
