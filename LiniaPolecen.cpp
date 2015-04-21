@@ -31,9 +31,9 @@ void LiniaPolecen::liniaPolecen()
         }
         else if(czyToPolecenie(root, "debug", 1))
         {
-            if( root->opcja.compare("0") == 0 )
+            if( root->nastepny->opcja.compare("0") == 0 )
                 debug = 0;
-            else if(root->opcja.compare("1") == 0)
+            else if(root->nastepny->opcja.compare("1") == 0)
                 debug = 1;
             else
                 cout << "Blad: niepoprawna opcja" << endl;
@@ -132,7 +132,7 @@ LiniaPolecen::Token * LiniaPolecen::dajTokeny(string linia, Token *root)
     for (std::string::iterator it=linia.begin(); it!=linia.end(); ++it)
     {
 //        if (isupper(opcja[i]))
-        if (isalpha(*it) || isdigit(*it))
+        if (isgraph(*it) )
         {
             if (nowyToken == true)
             {

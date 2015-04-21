@@ -272,3 +272,104 @@
 	"OrganizmyZywe.hpp"
 	"Zwierzeta.hpp"
 
+1429542740 source:d:\gittestrepos\zuziagit\systematyka\jajorodne.cpp
+	"Jajorodne.hpp"
+
+1429542740 d:\gittestrepos\zuziagit\systematyka\jajorodne.hpp
+	"Zwierzeta.hpp"
+
+1429515488 d:\gittestrepos\zuziagit\systematyka\zwierzeta.hpp
+	"OrganizmyZywe.hpp"
+
+1429597494 d:\gittestrepos\zuziagit\systematyka\organizmyzywe.hpp
+	<stdlib.h>
+	<iostream>
+	<stdio.h>
+	<string.h>
+
+1429620135 source:d:\gittestrepos\zuziagit\systematyka\liniapolecen.cpp
+	<iostream>
+	<string>
+	"LiniaPolecen.hpp"
+
+1429613557 d:\gittestrepos\zuziagit\systematyka\liniapolecen.hpp
+	"include/Drzewo.hpp"
+
+1429597494 d:\gittestrepos\zuziagit\systematyka\include\drzewo.hpp
+	<string>
+	"../OrganizmyZywe.hpp"
+	"../Jajorodne.hpp"
+	"../Zyworodne.hpp"
+	"../Nasienne.hpp"
+	"../Paprotniki.hpp"
+	"../Mchy.hpp"
+	"../Torfowce.hpp"
+
+1429542740 d:\gittestrepos\zuziagit\systematyka\zyworodne.hpp
+	"OrganizmyZywe.hpp"
+	"Zwierzeta.hpp"
+
+1429515488 d:\gittestrepos\zuziagit\systematyka\nasienne.hpp
+	"Rosliny.hpp"
+
+1429515488 d:\gittestrepos\zuziagit\systematyka\rosliny.hpp
+	"OrganizmyZywe.hpp"
+
+1429515488 d:\gittestrepos\zuziagit\systematyka\paprotniki.hpp
+	"Zarodnikowe.hpp"
+
+1429515488 d:\gittestrepos\zuziagit\systematyka\zarodnikowe.hpp
+	"Rosliny.hpp"
+
+1429515488 d:\gittestrepos\zuziagit\systematyka\mchy.hpp
+	"Mszaki.hpp"
+
+1429515488 d:\gittestrepos\zuziagit\systematyka\mszaki.hpp
+	"Zarodnikowe.hpp"
+
+1429515488 d:\gittestrepos\zuziagit\systematyka\torfowce.hpp
+	"Mszaki.hpp"
+
+1429515488 source:d:\gittestrepos\zuziagit\systematyka\mchy.cpp
+	"Mchy.hpp"
+
+1429515488 source:d:\gittestrepos\zuziagit\systematyka\mszaki.cpp
+	"Mszaki.hpp"
+
+1429515488 source:d:\gittestrepos\zuziagit\systematyka\nasienne.cpp
+	"Nasienne.hpp"
+
+1429597494 source:d:\gittestrepos\zuziagit\systematyka\organizmyzywe.cpp
+	<string>
+	<iostream>
+	"OrganizmyZywe.hpp"
+
+1429515488 source:d:\gittestrepos\zuziagit\systematyka\paprotniki.cpp
+	"Paprotniki.hpp"
+
+1429515488 source:d:\gittestrepos\zuziagit\systematyka\rosliny.cpp
+	"Rosliny.hpp"
+
+1429515488 source:d:\gittestrepos\zuziagit\systematyka\torfowce.cpp
+	"Torfowce.hpp"
+
+1429515488 source:d:\gittestrepos\zuziagit\systematyka\zarodnikowe.cpp
+	"Zarodnikowe.hpp"
+
+1429515488 source:d:\gittestrepos\zuziagit\systematyka\zwierzeta.cpp
+	<iostream>
+	<string>
+	"Zwierzeta.hpp"
+
+1429542740 source:d:\gittestrepos\zuziagit\systematyka\zyworodne.cpp
+	"Zyworodne.hpp"
+
+1429597494 source:d:\gittestrepos\zuziagit\systematyka\main.cpp
+	<iostream>
+	"LiniaPolecen.hpp"
+	"OrganizmyZywe.hpp"
+
+1429597494 source:d:\gittestrepos\zuziagit\systematyka\src\drzewo.cpp
+	<iostream>
+	"Drzewo.hpp"
+
