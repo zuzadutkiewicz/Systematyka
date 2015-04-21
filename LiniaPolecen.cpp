@@ -1,184 +1,157 @@
 #include <iostream>
-#include <stdio.h>
-#include <string.h>
+#include <string>
 
 #include "LiniaPolecen.hpp"
 
 
 void LiniaPolecen::liniaPolecen()
 {
-    char opcja [200];
+    string linia;
     Token *root = NULL;
     int debug = 0;
     while (true)
     {
-        printf("%s $ ", drzewo.dajNazwaAktualny().c_str());
-        opcja[0] = '\0';
-        scanf("%[^\n]*", opcja);
-        getchar();
-        root = dajTokeny(opcja, root);
+        cout << drzewo.dajNazwaAktualny() <<  " $ ";
+        getline( cin, linia);
+        root = dajTokeny(linia.c_str(), root);
         if(debug == 1)
             wyswietlTokeny(root);
-        if(root != NULL && strcmp(root->opcja, "exit") == 0 )
+
+        if( czyToPolecenie(root, "exit", 0) )
         {
-            if(root->nastepny != NULL)
-                printf("Blad: za duzo parametrow\n");
-            else
-                return;
+            return;
         }
-        else if(root != NULL && strcmp(root->opcja, "cd") == 0 )
+        else if( czyToPolecenie(root, "cd", 1) )
         {
-            if(root->nastepny == NULL)
-                printf("Blad: brak parametru\n");
-            else if(root->nastepny->nastepny != NULL)
-                printf("Blad: za duzo parametrow\n");
-            else
-            {
-                drzewo.ustawAktualnyWezel(string(root->nastepny->opcja));
-            }
+            drzewo.ustawAktualnyWezel(string(root->nastepny->opcja));
         }
-        else if(root != NULL &&  strcmp(root->opcja, "cur") == 0 )
+        else if(czyToPolecenie(root, "cur", 0) )
         {
-            if(root->nastepny != NULL)
-                printf("Blad: za duzo parametrow\n");
-            else
-                cout << "Aktualny wezel: " << drzewo.dajNazwaAktualny() << endl;
+            cout << drzewo.dajNazwaAktualny() << endl;
         }
-        else if(root != NULL && strcmp(root->opcja, "debug") == 0 )
+        else if(czyToPolecenie(root, "debug", 1))
         {
-            if(root->nastepny == NULL)
-                printf("Blad: brak parametru\n");
-            else if( strcmp(root->nastepny->opcja, "0") == 0 )
+            if( root->opcja.compare("0") == 0 )
                 debug = 0;
-            else if( strcmp(root->nastepny->opcja, "1") == 0)
+            else if(root->opcja.compare("1") == 0)
                 debug = 1;
             else
-                printf("Blad: niepoprawna opcja\n");
+                cout << "Blad: niepoprawna opcja" << endl;
         }
-        else if(root != NULL && strcmp(root->opcja, "tree") == 0 )
+        else if(czyToPolecenie(root, "tree", 0, 1))
         {
-            if(root->nastepny != NULL && root->nastepny->nastepny != NULL)
-                printf("Blad: za duzo parametrow\n");
+            if(root->nastepny == NULL)
+                drzewo.wyswietlDrzewo();
             else
-                if(root->nastepny == NULL)
-                    drzewo.wyswietlDrzewo();
-                else
-                    drzewo.wyswietlDrzewo(string(root->nastepny->opcja));
+                drzewo.wyswietlDrzewo(string(root->nastepny->opcja));
         }
-        else if(root != NULL && strcmp(root->opcja, "dir") == 0 )
+        else if(czyToPolecenie(root, "dir", 0) )
         {
-            if(root->nastepny != NULL)
-                printf("Blad: za duzo parametrow\n");
-            else
-                drzewo.wyswietlWszystkieZAltualny();
+            drzewo.wyswietlWszystkieZAltualny();
         }
-        else if(root != NULL && strcmp(root->opcja, "read") == 0 )
+        else if(czyToPolecenie(root, "read", 0) )
         {
-            if(root->nastepny != NULL)
-                printf("Blad: za duzo parametrow\n");
-            else
-                cout << "Opcja niedostepna" << endl;
+            cout << "Opcja niedostepna" << endl;
         }
-        else if(root != NULL && strcmp(root->opcja, "save") == 0 )
+        else if(czyToPolecenie(root, "save", 0) )
         {
-            if(root->nastepny != NULL)
-                printf("Blad: za duzo parametrow\n");
-            else
-                cout << "Opcja niedostepna" << endl;
+            cout << "Opcja niedostepna" << endl;
         }
         // tworzenie obiektu do aktualnego wezla - mo
-        else if(root != NULL && strcmp(root->opcja, "mo") == 0 )
+        else if(czyToPolecenie(root, "mo", 1) )
         {
-            if(root->nastepny == NULL)
-                printf("Blad: brak parametru\n");
-            else if(root->nastepny->nastepny != NULL)
-                printf("Blad: za duzo parametrow\n");
-            else
-                drzewo.dodajDoAktualny();
+            drzewo.dodajDoAktualny();
         }
         // usuwanie obiektu o danej nazwie - do
-        else if(root != NULL && strcmp(root->opcja, "do") == 0 )
+        else if(czyToPolecenie(root, "do", 1))
         {
-            if(root->nastepny == NULL)
-                printf("Blad: brak parametru\n");
-            else if(root->nastepny->nastepny != NULL)
-                printf("Blad: za duzo parametrow\n");
-            else
-                drzewo.usunZAktualny(string(root->nastepny->opcja));
+            drzewo.usunZAktualny(string(root->nastepny->opcja));
         }
         // modyfikacja obiektu o danej nazwie - mdo
-        else if(root != NULL && strcmp(root->opcja, "mdo") == 0 )
+        else if(czyToPolecenie(root, "mdo", 1) )
         {
-            if(root->nastepny == NULL)
-                printf("Blad: brak parametru\n");
-            else if(root->nastepny->nastepny != NULL)
-                printf("Blad: za duzo parametrow\n");
-            else
-                cout << "Opcja niedostepna" << endl;
+            cout << "Opcja niedostepna" << endl;
         }
         // wyswietlenie szczegolowych informacji o obiekcie - show
-        else if(root != NULL && strcmp(root->opcja, "show") == 0 )
+        else if(czyToPolecenie(root, "show", 0, 1) )
         {
-            if(root->nastepny != NULL && root->nastepny->nastepny != NULL)
-                printf("Blad: za duzo parametrow\n");
-            else if(root->nastepny == NULL)
+            if(root->nastepny == NULL)
                 drzewo.wyswietlWszystkieZAltualny();
             else
                 drzewo.wyswietlObiektZAktualny(root->nastepny->opcja);
         }
-        else if(root != NULL && strcmp(root->opcja, "help") == 0 )
-            if(root->nastepny != NULL)
-                printf("Blad: za duzo parametrow\n");
-            else
+        else if(czyToPolecenie(root, "help", 0) )
                 help();
-
         else
         {
             if(root != NULL )
-                printf("Blad: niepoprawna opcja\n");
+                cout << "Blad polecenia lub niepoprawne parametry" << endl;
         }
         usunTokeny(root);
         root = NULL;
     }
 }
 
-LiniaPolecen::Token * LiniaPolecen::dajTokeny(char opcja[], Token *root)
+bool LiniaPolecen::czyToPolecenie(Token* root, string polecenie, int opcje)
 {
-    int i = 0;
-    int j = -1;
+    return czyToPolecenie(root, polecenie, opcje, opcje);
+}
+
+
+bool LiniaPolecen::czyToPolecenie(Token* root, string polecenie, int opcjeMin, int opcjeMax)
+{
+    if(root != NULL && root->opcja.compare(polecenie) == 0 )
+    {
+        if( (opcjeMax <= 0 && root->nastepny != NULL) ||
+                (opcjeMax <= 1 && root->nastepny != NULL && root->nastepny->nastepny != NULL) ||
+                (opcjeMax <= 2 && root->nastepny != NULL && root->nastepny->nastepny != NULL && root->nastepny->nastepny->nastepny != NULL) ||
+                (opcjeMax <= 3 && root->nastepny != NULL && root->nastepny->nastepny != NULL && root->nastepny->nastepny->nastepny != NULL && root->nastepny->nastepny->nastepny->nastepny != NULL) )
+        {
+            cout << "Blad: za duzo parametrow." << endl;
+            return false;
+        }
+
+        if( ( opcjeMin >= 1 && root->nastepny == NULL) ||
+                ( opcjeMin >= 2 && root->nastepny->nastepny == NULL) ||
+                ( opcjeMin >= 3 && root->nastepny->nastepny->nastepny == NULL) )
+        {
+            cout << "Blad: brak parametru." << endl;
+            return false;
+        }
+        return true;
+    }
+    return false;
+}
+
+
+LiniaPolecen::Token * LiniaPolecen::dajTokeny(string linia, Token *root)
+{
+    bool nowyToken = true;
     Token *token = NULL;
 
-    while ((opcja[i] != '\0') && (i <= 200))
+    for (std::string::iterator it=linia.begin(); it!=linia.end(); ++it)
     {
 //        if (isupper(opcja[i]))
-        if (isalpha(opcja[i]) || isdigit(opcja[i]))
+        if (isalpha(*it) || isdigit(*it))
         {
-            if (j == -1)
+            if (nowyToken == true)
             {
                 Token *poprzedni = token;
                 token = new Token();
-                j = 0;
+                nowyToken = false;
                 token->nastepny = NULL;
                 if (root == NULL)
                     root = token;
                 else
                     poprzedni->nastepny = token;
             }
-            token->opcja[j] = tolower(opcja[i]);
-            j++;
+            token->opcja = token->opcja + *it;
         }
         else
         {
-            if (token != NULL && j != -1)
-            {
-                token->opcja[j] = '\0';
-            }
-            j = -1;
+            nowyToken = true;
         }
-        i++;
     }
-    if (token != NULL && j != -1)
-        token->opcja[j] = '\0';
     return root;
 }
 
@@ -200,10 +173,10 @@ void LiniaPolecen::wyswietlTokeny(Token *root)
     Token *aktualny = root;
     while(aktualny != NULL)
     {
-        printf("%s->", aktualny->opcja);
+        cout << aktualny->opcja << "->";
         aktualny = aktualny->nastepny;
     }
-    printf("NULL\n");
+    cout << "NULL" << endl;
 }
 
 void LiniaPolecen::help()

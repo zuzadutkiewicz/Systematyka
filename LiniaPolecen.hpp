@@ -9,14 +9,16 @@ class LiniaPolecen
 public:
     typedef struct Token
     {
-        char opcja[200];
+        string opcja;
         struct Token *nastepny;
     } Token;
     Drzewo drzewo;
     void liniaPolecen();
-    Token * dajTokeny(char *opcja, Token *root);
+    Token * dajTokeny(string linia, Token *root);
     void usunTokeny(Token *root);
     void wyswietlTokeny(Token *root);
+    bool czyToPolecenie(Token* root, string polecenie, int opcje);
+    bool czyToPolecenie(Token* root, string polecenie, int opcjeMin, int opcjeMax);
     void help();
 
 };
