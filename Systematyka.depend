@@ -73,13 +73,13 @@
 	"OrganizmyZywe.hpp"
 	"Zwierzeta.hpp"
 
-1429650683 c:\users\zuza\gitrepos\systematyka\organizmyzywe.hpp
+1429826368 c:\users\zuza\gitrepos\systematyka\organizmyzywe.hpp
 	<stdlib.h>
 	<iostream>
 	<stdio.h>
 	<string>
 
-1429097260 c:\users\zuza\gitrepos\systematyka\zwierzeta.hpp
+1429823612 c:\users\zuza\gitrepos\systematyka\zwierzeta.hpp
 	"OrganizmyZywe.hpp"
 
 1429649217 source:c:\users\zuza\gitrepos\systematyka\main.cpp
@@ -87,39 +87,39 @@
 	"LiniaPolecen.hpp"
 	"OrganizmyZywe.hpp"
 
-1429100853 source:c:\users\zuza\gitrepos\systematyka\mchy.cpp
+1429822734 source:c:\users\zuza\gitrepos\systematyka\mchy.cpp
 	"Mchy.hpp"
 
-1429100867 c:\users\zuza\gitrepos\systematyka\mchy.hpp
+1429823502 c:\users\zuza\gitrepos\systematyka\mchy.hpp
 	"Mszaki.hpp"
 
-1429100680 c:\users\zuza\gitrepos\systematyka\mszaki.hpp
+1429823612 c:\users\zuza\gitrepos\systematyka\mszaki.hpp
 	"Zarodnikowe.hpp"
 
-1429098048 c:\users\zuza\gitrepos\systematyka\zarodnikowe.hpp
+1429823612 c:\users\zuza\gitrepos\systematyka\zarodnikowe.hpp
 	"Rosliny.hpp"
 
-1429097723 c:\users\zuza\gitrepos\systematyka\rosliny.hpp
+1429823612 c:\users\zuza\gitrepos\systematyka\rosliny.hpp
 	"OrganizmyZywe.hpp"
 
-1429100680 source:c:\users\zuza\gitrepos\systematyka\mszaki.cpp
+1429822743 source:c:\users\zuza\gitrepos\systematyka\mszaki.cpp
 	"Mszaki.hpp"
 
-1429097919 source:c:\users\zuza\gitrepos\systematyka\nasienne.cpp
+1429822752 source:c:\users\zuza\gitrepos\systematyka\nasienne.cpp
 	"Nasienne.hpp"
 
-1429097889 c:\users\zuza\gitrepos\systematyka\nasienne.hpp
+1429823612 c:\users\zuza\gitrepos\systematyka\nasienne.hpp
 	"Rosliny.hpp"
 
-1429655420 source:c:\users\zuza\gitrepos\systematyka\organizmyzywe.cpp
+1429823044 source:c:\users\zuza\gitrepos\systematyka\organizmyzywe.cpp
 	<string>
 	<iostream>
 	"OrganizmyZywe.hpp"
 
-1429098276 source:c:\users\zuza\gitrepos\systematyka\paprotniki.cpp
+1429822770 source:c:\users\zuza\gitrepos\systematyka\paprotniki.cpp
 	"Paprotniki.hpp"
 
-1429098237 c:\users\zuza\gitrepos\systematyka\paprotniki.hpp
+1429823612 c:\users\zuza\gitrepos\systematyka\paprotniki.hpp
 	"Zarodnikowe.hpp"
 
 1429097445 source:c:\users\zuza\gitrepos\systematyka\roslinozercy.cpp
@@ -128,24 +128,24 @@
 1429097527 c:\users\zuza\gitrepos\systematyka\roslinozercy.hpp
 	"Zwierzeta.hpp"
 
-1429097724 source:c:\users\zuza\gitrepos\systematyka\rosliny.cpp
+1429822781 source:c:\users\zuza\gitrepos\systematyka\rosliny.cpp
 	"Rosliny.hpp"
 
-1429101054 source:c:\users\zuza\gitrepos\systematyka\torfowce.cpp
+1429823209 source:c:\users\zuza\gitrepos\systematyka\torfowce.cpp
 	"Torfowce.hpp"
 
-1429101054 c:\users\zuza\gitrepos\systematyka\torfowce.hpp
+1429823612 c:\users\zuza\gitrepos\systematyka\torfowce.hpp
 	"Mszaki.hpp"
 
-1429098080 source:c:\users\zuza\gitrepos\systematyka\zarodnikowe.cpp
+1429823216 source:c:\users\zuza\gitrepos\systematyka\zarodnikowe.cpp
 	"Zarodnikowe.hpp"
 
-1429097260 source:c:\users\zuza\gitrepos\systematyka\zwierzeta.cpp
+1429823222 source:c:\users\zuza\gitrepos\systematyka\zwierzeta.cpp
 	<iostream>
 	<string>
 	"Zwierzeta.hpp"
 
-1429654465 source:c:\users\zuza\gitrepos\systematyka\liniapolecen.cpp
+1429826247 source:c:\users\zuza\gitrepos\systematyka\liniapolecen.cpp
 	<iostream>
 	<stdio.h>
 	<string.h>
@@ -245,7 +245,7 @@
 	<iostream>
 	"Drzewo.hpp"
 
-1429655144 c:\users\zuza\gitrepos\systematyka\include\drzewo.hpp
+1429824982 c:\users\zuza\gitrepos\systematyka\include\drzewo.hpp
 	<string>
 	"../OrganizmyZywe.hpp"
 	"../Jajorodne.hpp"
@@ -255,20 +255,20 @@
 	"../Mchy.hpp"
 	"../Torfowce.hpp"
 
-1429655647 source:c:\users\zuza\gitrepos\systematyka\src\drzewo.cpp
+1429825885 source:c:\users\zuza\gitrepos\systematyka\src\drzewo.cpp
 	<iostream>
 	"Drzewo.hpp"
 
-1429475104 source:c:\users\zuza\gitrepos\systematyka\jajorodne.cpp
+1429822725 source:c:\users\zuza\gitrepos\systematyka\jajorodne.cpp
 	"Jajorodne.hpp"
 
-1429475323 c:\users\zuza\gitrepos\systematyka\jajorodne.hpp
+1429823501 c:\users\zuza\gitrepos\systematyka\jajorodne.hpp
 	"Zwierzeta.hpp"
 
-1429475305 source:c:\users\zuza\gitrepos\systematyka\zyworodne.cpp
+1429823228 source:c:\users\zuza\gitrepos\systematyka\zyworodne.cpp
 	"Zyworodne.hpp"
 
-1429475340 c:\users\zuza\gitrepos\systematyka\zyworodne.hpp
+1429823612 c:\users\zuza\gitrepos\systematyka\zyworodne.hpp
 	"OrganizmyZywe.hpp"
 	"Zwierzeta.hpp"
 

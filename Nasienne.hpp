@@ -8,8 +8,14 @@ class Nasienne : public Rosliny
     public:
     void produkujNasiona();
 
-    private:
-        void DNAnasiona();
+protected:
+    string nazwa;
+    string imie;
+
+
+private:
+    string nazwaKlasy;
+    string coLubi;
 };
 
 #endif // NASIENNE_HPP_INCLUDED

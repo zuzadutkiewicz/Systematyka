@@ -11,20 +11,25 @@ using namespace std;
 class OrganizmyZywe
 {
 public:
+    OrganizmyZywe();
+    virtual ~OrganizmyZywe();
     OrganizmyZywe *nastepny;
     void jedz();
     void rozmnazanie();
-    string nazwa;
-    string imie;
-    string coLubi;
     virtual void edytuj();
     virtual void wyswietl();
     virtual void wyswietlWszy();
+    virtual string dajNazwe();
+    virtual void ustawNazwa(string nazwa);
 
+protected:
+    string nazwa;
+    string imie;
 
 
 private:
-    void iloscGatunkow();
+    string nazwaKlasy;
+    string coLubi;
 };
 
 #endif // ORGANIZMYZYWE_HPP_INCLUDED

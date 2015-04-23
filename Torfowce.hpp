@@ -8,8 +8,14 @@ class Torfowce : public Mszaki
 public:
     void specyfikacjaGatunku ();
 
+protected:
+    string nazwa;
+    string imie;
+
+
 private:
-    void DNATorfowcow();
+    string nazwaKlasy;
+    string coLubi;
 
 
 };

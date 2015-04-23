@@ -144,6 +144,15 @@ void Drzewo::wyswietlWszystkieZWezla()
     rekurWyswietlWszystkieZWezla(aktualny, 0);
 }
 
+void Drzewo::wyswietlWszystkieZWezla(string nazwaWezla)
+{
+    Wezel *wezel = rekurDajWezel(root, nazwaWezla);
+    if(wezel == NULL)
+        cout << "Niepoprawna nazwa wezla " << nazwaWezla << endl;
+    else
+        rekurWyswietlWszystkieZWezla(wezel, 0);
+}
+
 void Drzewo::rekurWyswietlWszystkieZWezla(Wezel* wezel,int wysokosc)
 {
 
@@ -231,7 +240,7 @@ void Drzewo::dodajDoAktualny(string nazwa)
     }
 
     OrganizmyZywe *orgZy = dajObiektLisc(aktualny->nazwa);
-    orgZy->nazwa = nazwa;
+    orgZy->ustawNazwa(nazwa);
     orgZy->edytuj();
     orgZy->nastepny = aktualny->lista;
     aktualny->lista = orgZy;
@@ -247,23 +256,26 @@ void Drzewo::usunZAktualny(string nazwaObiektu)
     }
 
     OrganizmyZywe *orgZy = aktualny->lista;
-    OrganizmyZywe *orgZyPo = NULL;
-    if(orgZy == NULL)
-    {
-        cout << "Brak obiektu o nazwie " << nazwaObiektu << endl;
-    }
+    OrganizmyZywe *orgZyPoprz = NULL;
+
     while(orgZy != NULL)
     {
-        if( orgZy->nazwa.compare(nazwaObiektu) == 0)
+        if( orgZy->dajNazwe().compare(nazwaObiektu) == 0)
         {
-            if(orgZyPo == NULL)
+
+            if(orgZyPoprz == NULL)
+            {//pocztaek listy
                 aktualny->lista = orgZy->nastepny;
+            }
             else
-                orgZyPo->nastepny = orgZy->nastepny;
+            {
+                // dowolny element poza poczatkiem
+                orgZyPoprz->nastepny = orgZy->nastepny;
+            }
             delete(orgZy);
             return;
         }
-        orgZyPo = orgZy;
+        orgZyPoprz = orgZy;
         orgZy = orgZy->nastepny;
     }
     cout << "Brak obiektu o nazwie " << nazwaObiektu << endl;
@@ -279,13 +291,10 @@ void Drzewo::edytujZAktualny(string nazwaObiektu)
     }
 
     OrganizmyZywe *orgZy = aktualny->lista;
-    if(orgZy == NULL)
-    {
-        cout << "Brak obiektu o nazwie " << nazwaObiektu << endl;
-    }
+
     while(orgZy != NULL)
     {
-        if( orgZy->nazwa.compare(nazwaObiektu) == 0)
+        if( orgZy->dajNazwe().compare(nazwaObiektu) == 0)
         {
             orgZy->wyswietlWszy();
             cout << endl << "Wpisz nowe dane: " << endl;
@@ -295,8 +304,9 @@ void Drzewo::edytujZAktualny(string nazwaObiektu)
         orgZy = orgZy->nastepny;
     }
     cout << "Brak obiektu o nazwie " << nazwaObiektu << endl;
-
 }
+
+
 void Drzewo::wyswietlWszystkieZAltualny()
 {
     wyswietlWszystkieZWezlaLiscia(aktualny);
@@ -338,7 +348,7 @@ void Drzewo::wyswietlObiektZAktualny(string nazwaObiektu)
     }
     while(orgZy != NULL)
     {
-        if( orgZy->nazwa.compare(nazwaObiektu) == 0)
+        if( orgZy->dajNazwe().compare(nazwaObiektu) == 0)
         {
             orgZy->wyswietlWszy();
             return;

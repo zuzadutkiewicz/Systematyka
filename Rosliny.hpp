@@ -8,8 +8,15 @@ class Rosliny : public OrganizmyZywe
 public:
     void autotrofy();
 
+protected:
+    string nazwa;
+    string imie;
+
+
+
 private:
-    void jakoscPodloza ();
+    string nazwaKlasy;
+    string coLubi;
 };
 
 #endif // ROSLINY_HPP_INCLUDED

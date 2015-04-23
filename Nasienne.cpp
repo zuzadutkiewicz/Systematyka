@@ -7,7 +7,4 @@ void Nasienne::produkujNasiona()
 
 }
 
-void Nasienne::DNAnasiona()
-{
 
-}

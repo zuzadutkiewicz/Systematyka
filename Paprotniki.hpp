@@ -8,8 +8,14 @@ class Paprotniki : public Zarodnikowe
 public:
     void rozsiewajZarodniki();
 
+protected:
+    string nazwa;
+    string imie;
+
+
 private:
-    void DNAnowychPaproci();
+    string nazwaKlasy;
+    string coLubi;
 
 } ;
 #endif // PAPROTNIKI_HPP_INCLUDED

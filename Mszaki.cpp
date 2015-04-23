@@ -7,7 +7,4 @@ void Mszaki::tworzZarodnie()
 
 }
 
-void Mszaki::iloscZarodni()
-{
 
-}

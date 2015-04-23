@@ -6,11 +6,17 @@
 
 using namespace std;
 
-
-void OrganizmyZywe::iloscGatunkow()
+OrganizmyZywe::OrganizmyZywe()
 {
 
 }
+
+
+OrganizmyZywe::~OrganizmyZywe()
+{
+
+}
+
 
 void OrganizmyZywe::jedz()
 {
@@ -43,4 +49,14 @@ void OrganizmyZywe::wyswietlWszy()
     cout << "Nazwa organizmu: " << nazwa << endl;
     cout << "Imie organizmu: " << imie << endl;
     cout << "Organizm ten lubi: " << coLubi << endl;
+}
+
+string OrganizmyZywe::dajNazwe()
+{
+    return this->nazwa;
+}
+
+void OrganizmyZywe::ustawNazwa(string nazwa)
+{
+    this->nazwa = nazwa;
 }

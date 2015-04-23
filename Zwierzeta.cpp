@@ -10,7 +10,3 @@ void Zwierzeta::heterotrofy()
 
 }
 
-void Zwierzeta::poziomGlodu()
-{
-
-}

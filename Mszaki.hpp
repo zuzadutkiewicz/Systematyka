@@ -8,8 +8,15 @@ class Mszaki : public Zarodnikowe
 public:
     void tworzZarodnie();
 
+protected:
+    string nazwa;
+    string imie;
+
+
+
 private:
-    void iloscZarodni();
+    string nazwaKlasy;
+    string coLubi;
 };
 
 

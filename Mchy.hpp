@@ -8,8 +8,14 @@ class Mchy : public Mszaki
 public:
     void specyfikacjaGatunku ();
 
+protected:
+    string nazwa;
+    string imie;
+
+
 private:
-    void DNAMchu();
+    string nazwaKlasy;
+    string coLubi;
 } ;
 
 #endif // MCHY_HPP_INCLUDED

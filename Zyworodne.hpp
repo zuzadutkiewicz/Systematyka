@@ -9,7 +9,13 @@ class Zyworodne : public Zwierzeta
 public:
     void poluj();
 
+protected:
+    string nazwa;
+    string imie;
+
 private:
-    void syty();
+    string nazwaKlasy;
+    string coLubi;
+
 };
 #endif // DRAPIEZNIKI_HPP_INCLUDED

@@ -9,7 +9,4 @@ void Zyworodne::poluj()
 }
 
 
-void Zyworodne::syty()
-{
 
-}

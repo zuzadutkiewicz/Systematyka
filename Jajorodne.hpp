@@ -8,8 +8,15 @@ class Jajorodne : public Zwierzeta
 public:
     void szukajJedzenia();
 
+protected:
+    string nazwa;
+    string imie;
+
+
 private:
-    void nieJedzTru();
+    string nazwaKlasy;
+    string coLubi;
+
 };
 
 #endif // ROSLINOZERCY_HPP_INCLUDED

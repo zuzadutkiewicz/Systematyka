@@ -5,8 +5,4 @@ void Mchy::specyfikacjaGatunku()
 
 }
 
-void Mchy::DNAMchu()
 
-{
-
-}

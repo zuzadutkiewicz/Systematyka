@@ -9,8 +9,14 @@ public:
 
     void heterotrofy();
 
+protected:
+    string nazwa;
+    string imie;
+
+
 private:
-    void poziomGlodu();
+    string nazwaKlasy;
+    string coLubi;
 
 };
 

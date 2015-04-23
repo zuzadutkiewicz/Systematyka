@@ -8,8 +8,14 @@ class Zarodnikowe : public Rosliny
 public:
     void produkujZarodniki();
 
+protected:
+    string nazwa;
+    string imie;
+
+
 private:
-    void iloscZarodnikow();
+    string nazwaKlasy;
+    string coLubi;
 };
 
 #endif // ZARODNIKOWE_HPP_INCLUDED

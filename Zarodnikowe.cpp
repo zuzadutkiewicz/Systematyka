@@ -7,7 +7,3 @@ void Zarodnikowe::produkujZarodniki()
 
 }
 
-void Zarodnikowe::iloscZarodnikow()
-{
-
-}

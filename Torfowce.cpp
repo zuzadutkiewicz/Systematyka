@@ -6,7 +6,3 @@ void Torfowce::specyfikacjaGatunku()
 
 }
 
-void Torfowce::DNATorfowcow()
-{
-
-}

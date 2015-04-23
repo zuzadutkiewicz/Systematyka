@@ -39,6 +39,7 @@ public:
     void edytujZAktualny(string nazwaObiektu);
     void wyswietlWszystkieZAltualny();
     void wyswietlWszystkieZWezla();
+    void wyswietlWszystkieZWezla(string nazwaWezla);
     void wyswietlWszystkieZWezlaLiscia(Wezel *wezel);
     void rekurWyswietlWszystkieZWezla(Wezel* wezel,int wysokosc);
     void wyswietlObiektZAktualny(string nazwaObiektu);
