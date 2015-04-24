@@ -7,8 +7,8 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin\Debug\Systematyka" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj\Debug\" />
+				<Option output="bin/Debug/Systematyka" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
@@ -17,8 +17,8 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin\Release\Systematyka" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj\Release\" />
+				<Option output="bin/Release/Systematyka" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
@@ -58,15 +58,9 @@
 		<Unit filename="Zwierzeta.hpp" />
 		<Unit filename="Zyworodne.cpp" />
 		<Unit filename="Zyworodne.hpp" />
-		<Unit filename="include\AnalizatorSkladniowy.hpp" />
-		<Unit filename="include\Drzewo.hpp" />
-		<Unit filename="include\Interpreter.hpp" />
-		<Unit filename="include\Tokeny.hpp" />
+		<Unit filename="include/Drzewo.hpp" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src\AnalizatorSkladniowy.cpp" />
-		<Unit filename="src\Drzewo.cpp" />
-		<Unit filename="src\Interpreter.cpp" />
-		<Unit filename="src\Tokeny.cpp" />
+		<Unit filename="src/Drzewo.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

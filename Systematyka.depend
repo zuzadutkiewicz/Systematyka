@@ -287,13 +287,14 @@
 	<stdio.h>
 	<string.h>
 
-1429620135 source:d:\gittestrepos\zuziagit\systematyka\liniapolecen.cpp
+1429869000 source:d:\gittestrepos\zuziagit\systematyka\liniapolecen.cpp
 	<iostream>
 	<string>
 	"LiniaPolecen.hpp"
 
-1429613557 d:\gittestrepos\zuziagit\systematyka\liniapolecen.hpp
-	"include/Drzewo.hpp"
+1429865114 d:\gittestrepos\zuziagit\systematyka\liniapolecen.hpp
+	<AnalizatorSkladniowy.hpp>
+	<Interpreter.hpp>
 
 1429597494 d:\gittestrepos\zuziagit\systematyka\include\drzewo.hpp
 	<string>
@@ -364,7 +365,7 @@
 1429542740 source:d:\gittestrepos\zuziagit\systematyka\zyworodne.cpp
 	"Zyworodne.hpp"
 
-1429597494 source:d:\gittestrepos\zuziagit\systematyka\main.cpp
+1429867398 source:d:\gittestrepos\zuziagit\systematyka\main.cpp
 	<iostream>
 	"LiniaPolecen.hpp"
 	"OrganizmyZywe.hpp"
@@ -372,4 +373,28 @@
 1429597494 source:d:\gittestrepos\zuziagit\systematyka\src\drzewo.cpp
 	<iostream>
 	"Drzewo.hpp"
+
+1429859884 d:\gittestrepos\zuziagit\systematyka\include\tokenizuj.hpp
+
+1429868451 d:\gittestrepos\zuziagit\systematyka\include\analizatorskladniowy.hpp
+	<iostream>
+	<Tokeny.hpp>
+
+1429868022 d:\gittestrepos\zuziagit\systematyka\include\tokeny.hpp
+	<iostream>
+	<string>
+
+1429868742 d:\gittestrepos\zuziagit\systematyka\include\interpreter.hpp
+	<string>
+	<Drzewo.hpp>
+	<Tokeny.hpp>
+
+1429869211 source:d:\gittestrepos\zuziagit\systematyka\src\analizatorskladniowy.cpp
+	"AnalizatorSkladniowy.hpp"
+
+1429869122 source:d:\gittestrepos\zuziagit\systematyka\src\interpreter.cpp
+	"Interpreter.hpp"
+
+1429867602 source:d:\gittestrepos\zuziagit\systematyka\src\tokeny.cpp
+	<Tokeny.hpp>
 
