@@ -2,6 +2,8 @@
 #define DRZEWO_H
 
 #include <string>
+#include <iostream>
+#include <fstream>
 
 #include "../OrganizmyZywe.hpp"
 #include "../Jajorodne.hpp"
@@ -44,7 +46,8 @@ public:
     void rekurWyswietlWszystkieZWezla(Wezel* wezel,int wysokosc);
     void wyswietlObiektZAktualny(string nazwaObiektu);
     OrganizmyZywe* dajObiektLisc(string nazwaObiektu);
-
+    void zapiszWszystkieObiekty();
+    void odczytajWszystkieObiekty();
 
 
 protected:
@@ -56,6 +59,12 @@ private:
     void rekurUsunWszystko(Wezel* wezel);
     bool jestLisciem(Wezel* wezel);
     Wezel* dajWezel(string nazwaWezla);
+    void zapiszWszystkieZWezlaLiscia(Wezel *wezel, fstream *plik);
+    void rekurZapiszWszystkieObiekty(Wezel* wezel,fstream *plik);
+
+
+
+
 
 };
 

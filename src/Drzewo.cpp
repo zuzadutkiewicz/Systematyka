@@ -264,7 +264,8 @@ void Drzewo::usunZAktualny(string nazwaObiektu)
         {
 
             if(orgZyPoprz == NULL)
-            {//pocztaek listy
+            {
+                //pocztaek listy
                 aktualny->lista = orgZy->nastepny;
             }
             else
@@ -388,6 +389,93 @@ OrganizmyZywe* Drzewo::dajObiektLisc(string nazwaObiektu)
     {
         printf("Drzewo::dajObiektLisc: Niepoprawna nazwa obiektu.");
         return NULL;
+    }
+}
+
+void Drzewo::zapiszWszystkieObiekty()
+{
+    fstream plik;
+    string nazwaPliku = "plik.txt";
+    plik.open(nazwaPliku, ios::out);
+    if(plik.good()==false)
+    {
+        cout << "Nie powiodlo sie otwarcie pliku o nazwie:" << nazwaPliku << endl;
+    }
+
+    rekurZapiszWszystkieObiekty(root, &plik);
+}
+
+void Drzewo::rekurZapiszWszystkieObiekty(Wezel* wezel,fstream *plik)
+{
+
+    if(wezel!=NULL)
+    {
+        if(jestLisciem(wezel) == true)
+        {
+            zapiszWszystkieZWezlaLiscia(wezel, plik);
+        }
+        rekurZapiszWszystkieObiekty(wezel->lewy, plik);
+        rekurZapiszWszystkieObiekty(wezel->prawy, plik);
+    }
+}
+
+void Drzewo::zapiszWszystkieZWezlaLiscia(Wezel *wezel, fstream *plik)
+{
+    if(jestLisciem(wezel) == false)
+    {
+        return;
+    }
+    OrganizmyZywe *orgZy = wezel->lista;
+    while(orgZy != NULL)
+    {
+        string zapis;
+        zapis = wezel->nazwa + ";" + orgZy->dajWszystkieDelimitowane();
+        *plik << zapis << endl;
+        orgZy = orgZy->nastepny;
+    }
+}
+
+void Drzewo::odczytajWszystkieObiekty()
+{
+    fstream plik;
+    string nazwaPliku = "plik.txt";
+    string nazwaWezla;
+    plik.open(nazwaPliku, ios::in);
+    if(plik.good()==false)
+    {
+        cout << "Nie powiodlo sie otwarcie pliku o nazwie:" << nazwaPliku << endl;
+    }
+    while(getline(plik,nazwaWezla,';'))
+    {
+        string nazwa;
+        string imie;
+        string coLubi;
+
+        Wezel *wezel = rekurDajWezel(root, nazwaWezla);
+        OrganizmyZywe *orgZy =dajObiektLisc(nazwaWezla);
+
+        if (wezel == NULL)
+        {
+            cout << "Brak wezla o nazwie: " << nazwaWezla << endl;
+            getline(plik,coLubi);
+            continue;
+        }
+        if(jestLisciem(wezel) == false)
+        {
+            cout << "Podany wezel nie jest lisciem: "<< nazwaWezla << endl;
+            getline(plik,coLubi);
+            continue;
+        }
+        getline(plik,nazwa,';');
+        getline(plik,imie,';');
+        getline(plik,coLubi);
+
+        orgZy->ustawWszystkiePola(nazwa, imie, coLubi);
+
+        // wstawienie do wlasciwego wezla
+        orgZy->nastepny = wezel->lista;
+        wezel->lista = orgZy;
+
     }
 }
 

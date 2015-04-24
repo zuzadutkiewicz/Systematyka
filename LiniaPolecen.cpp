@@ -65,14 +65,14 @@ void LiniaPolecen::liniaPolecen()
             if(root->nastepny != NULL)
                 printf("Blad: za duzo parametrow\n");
             else
-                cout << "Opcja niedostepna" << endl;
+                drzewo.odczytajWszystkieObiekty();
         }
         else if(root != NULL && strcmp(root->opcja, "save") == 0 )
         {
             if(root->nastepny != NULL)
                 printf("Blad: za duzo parametrow\n");
             else
-                cout << "Opcja niedostepna" << endl;
+                drzewo.zapiszWszystkieObiekty();
         }
         // tworzenie obiektu do aktualnego wezla - mo
         else if(root != NULL && strcmp(root->opcja, "mo") == 0 )

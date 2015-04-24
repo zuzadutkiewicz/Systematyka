@@ -60,3 +60,17 @@ void OrganizmyZywe::ustawNazwa(string nazwa)
 {
     this->nazwa = nazwa;
 }
+
+string OrganizmyZywe::dajWszystkieDelimitowane()
+{
+    string wszyDelim;
+    wszyDelim = nazwa + ";" + imie + ";" + coLubi;
+    return wszyDelim;
+}
+
+void OrganizmyZywe::ustawWszystkiePola(string p_nazwa, string p_imie, string p_coLubi)
+{
+  nazwa = p_nazwa;
+  imie = p_imie;
+  coLubi = p_coLubi;
+}

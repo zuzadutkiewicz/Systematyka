@@ -21,6 +21,8 @@ public:
     virtual void wyswietlWszy();
     virtual string dajNazwe();
     virtual void ustawNazwa(string nazwa);
+    virtual string dajWszystkieDelimitowane();
+    virtual void ustawWszystkiePola(string nazwa, string imie, string coLubi);
 
 protected:
     string nazwa;
