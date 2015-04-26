@@ -7,16 +7,15 @@ class Zwierzeta :public OrganizmyZywe
 {
 public:
 
-    void heterotrofy();
 
 protected:
     string nazwa;
-    string imie;
+    string gatunek;
 
 
 private:
     string nazwaKlasy;
-    string coLubi;
+    string specyfikacja;
 
 };
 

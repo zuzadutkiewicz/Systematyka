@@ -6,16 +6,15 @@
 class Jajorodne : public Zwierzeta
 {
 public:
-    void szukajJedzenia();
 
 protected:
     string nazwa;
-    string imie;
+    string gatunek;
 
 
 private:
     string nazwaKlasy;
-    string coLubi;
+    string specyfikacja;
 
 };
 

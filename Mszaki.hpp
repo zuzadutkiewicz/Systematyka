@@ -6,17 +6,16 @@
 class Mszaki : public Zarodnikowe
 {
 public:
-    void tworzZarodnie();
 
 protected:
     string nazwa;
-    string imie;
+    string gatunek;
 
 
 
 private:
     string nazwaKlasy;
-    string coLubi;
+    string specyfikacja;
 };
 
 

@@ -448,8 +448,8 @@ void Drzewo::odczytajWszystkieObiekty()
     while(getline(plik,nazwaWezla,';'))
     {
         string nazwa;
-        string imie;
-        string coLubi;
+        string gatunek;
+        string specyfikacja;
 
         Wezel *wezel = rekurDajWezel(root, nazwaWezla);
         OrganizmyZywe *orgZy =dajObiektLisc(nazwaWezla);
@@ -457,20 +457,20 @@ void Drzewo::odczytajWszystkieObiekty()
         if (wezel == NULL)
         {
             cout << "Brak wezla o nazwie: " << nazwaWezla << endl;
-            getline(plik,coLubi);
+            getline(plik,specyfikacja);
             continue;
         }
         if(jestLisciem(wezel) == false)
         {
             cout << "Podany wezel nie jest lisciem: "<< nazwaWezla << endl;
-            getline(plik,coLubi);
+            getline(plik,specyfikacja);
             continue;
         }
         getline(plik,nazwa,';');
-        getline(plik,imie,';');
-        getline(plik,coLubi);
+        getline(plik,gatunek,';');
+        getline(plik,specyfikacja);
 
-        orgZy->ustawWszystkiePola(nazwa, imie, coLubi);
+        orgZy->ustawWszystkiePola(nazwa, gatunek, specyfikacja);
 
         // wstawienie do wlasciwego wezla
         orgZy->nastepny = wezel->lista;

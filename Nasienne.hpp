@@ -6,16 +6,15 @@
 class Nasienne : public Rosliny
 {
     public:
-    void produkujNasiona();
 
 protected:
     string nazwa;
-    string imie;
+    string gatunek;
 
 
 private:
     string nazwaKlasy;
-    string coLubi;
+    string specyfikacja;
 };
 
 #endif // NASIENNE_HPP_INCLUDED

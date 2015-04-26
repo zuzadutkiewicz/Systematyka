@@ -6,16 +6,15 @@
 class Paprotniki : public Zarodnikowe
 {
 public:
-    void rozsiewajZarodniki();
 
 protected:
     string nazwa;
-    string imie;
+    string gatunek;
 
 
 private:
     string nazwaKlasy;
-    string coLubi;
+    string specyfikacja;
 
 } ;
 #endif // PAPROTNIKI_HPP_INCLUDED

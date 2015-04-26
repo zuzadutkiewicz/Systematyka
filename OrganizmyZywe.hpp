@@ -26,12 +26,12 @@ public:
 
 protected:
     string nazwa;
-    string imie;
+    string gatunek;
 
 
 private:
     string nazwaKlasy;
-    string coLubi;
+    string specyfikacja;
 };
 
 #endif // ORGANIZMYZYWE_HPP_INCLUDED

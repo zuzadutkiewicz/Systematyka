@@ -6,17 +6,16 @@
 class Rosliny : public OrganizmyZywe
 {
 public:
-    void autotrofy();
 
 protected:
     string nazwa;
-    string imie;
+    string gatunek;
 
 
 
 private:
     string nazwaKlasy;
-    string coLubi;
+    string specyfikacja;
 };
 
 #endif // ROSLINY_HPP_INCLUDED

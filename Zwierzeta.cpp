@@ -5,8 +5,5 @@
 
 using namespace std;
 
-void Zwierzeta::heterotrofy()
-{
 
-}
 

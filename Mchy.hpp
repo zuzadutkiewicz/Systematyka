@@ -6,16 +6,15 @@
 class Mchy : public Mszaki
 {
 public:
-    void specyfikacjaGatunku ();
 
 protected:
     string nazwa;
-    string imie;
+    string gatunek;
 
 
 private:
     string nazwaKlasy;
-    string coLubi;
+    string specyfikacja;
 } ;
 
 #endif // MCHY_HPP_INCLUDED

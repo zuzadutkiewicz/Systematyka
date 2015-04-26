@@ -18,24 +18,15 @@ OrganizmyZywe::~OrganizmyZywe()
 }
 
 
-void OrganizmyZywe::jedz()
-{
-
-}
-
-void OrganizmyZywe::rozmnazanie()
-{
-
-}
 
 
 void OrganizmyZywe::edytuj ()
 {
 
-    cout << "Jak ma na imie ten organizm? ";
-    getline( cin, imie);
-    cout << "Co lubi ten orgaznim? ";
-    getline( cin, coLubi);
+    cout << "Jakiego gatunku jest ten organizm? ";
+    getline( cin, gatunek);
+    cout << "Podaj specyfikacje gatunku? ";
+    getline( cin, specyfikacja);
 
 }
 
@@ -47,8 +38,8 @@ void OrganizmyZywe::wyswietl()
 void OrganizmyZywe::wyswietlWszy()
 {
     cout << "Nazwa organizmu: " << nazwa << endl;
-    cout << "Imie organizmu: " << imie << endl;
-    cout << "Organizm ten lubi: " << coLubi << endl;
+    cout << "Gatunek organizmu: " << gatunek << endl;
+    cout << "Specyfikacja gatunku: " << specyfikacja << endl;
 }
 
 string OrganizmyZywe::dajNazwe()
@@ -64,13 +55,13 @@ void OrganizmyZywe::ustawNazwa(string nazwa)
 string OrganizmyZywe::dajWszystkieDelimitowane()
 {
     string wszyDelim;
-    wszyDelim = nazwa + ";" + imie + ";" + coLubi;
+    wszyDelim = nazwa + ";" + gatunek + ";" + specyfikacja;
     return wszyDelim;
 }
 
-void OrganizmyZywe::ustawWszystkiePola(string p_nazwa, string p_imie, string p_coLubi)
+void OrganizmyZywe::ustawWszystkiePola(string p_nazwa, string p_gatunek, string p_specyfikacja)
 {
   nazwa = p_nazwa;
-  imie = p_imie;
-  coLubi = p_coLubi;
+  gatunek = p_gatunek;
+  specyfikacja = p_specyfikacja;
 }
